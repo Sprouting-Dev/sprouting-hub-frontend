@@ -1,164 +1,138 @@
+@import 'tailwindcss';
+@import '@heroui/styles';
+
 :root {
-  --font-mono: 'Roboto Mono', monospace;
+  color-scheme: light;
+  --primary: oklch(0.4988 0.0919 221.68);
+  --secondary: oklch(0.6895 0.1256 176.55);
+  --accent: oklch(0.7022 0.2004 45.1);
+  --background: oklch(0.9702 0 0);
+  --surface: oklch(0.994 0.01 150);
+  --muted: oklch(0.47 0.03 145);
+  --border: oklch(0.89 0.02 145);
+  --shadow: 0 22px 70px rgba(15, 23, 42, 0.16);
+  --glow-emerald: rgba(20, 184, 166, 0.18);
+  --glow-sky: rgba(56, 189, 248, 0.18);
+  --glow-amber: rgba(245, 158, 11, 0.15);
+  --dark: oklch(0.3211 0 0);
 }
 
-* {
-  box-sizing: border-box;
-}
-
-html {
-  font-size: 18px;
-  line-height: 32px;
-
-  background: rgb(0, 0, 0);
-  -webkit-font-smoothing: antialiased;
-}
-
-html,
-body,
-#app {
-  height: 100%;
+@theme {
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-surface: var(--surface);
+  --color-muted: var(--muted);
+  --color-darl: var(--dark);
 }
 
 body {
-  font-family: system-ui;
-  font-size: 18px;
-  line-height: 32px;
-
-  margin: 0;
-  color: rgb(1000, 1000, 1000);
-
-  @media (max-width: 1024px) {
-    font-size: 15px;
-    line-height: 24px;
-  }
+  font-family:
+    'Inter',
+    var(--font-sans),
+    system-ui,
+    -apple-system,
+    'Segoe UI',
+    sans-serif;
+  background: var(--background);
+  color: oklch(0.22 0.02 140);
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
+.page-gradient {
+  position: relative;
+  isolation: isolate;
+  background:
+    radial-gradient(circle at 14% 18%, var(--glow-sky), transparent 28%),
+    radial-gradient(circle at 82% 10%, var(--glow-amber), transparent 28%),
+    radial-gradient(circle at 44% 82%, var(--glow-emerald), transparent 28%),
+    linear-gradient(180deg, rgba(248, 250, 252, 0.9), rgba(255, 255, 255, 0.94));
 }
 
-h1 {
-  margin: 40px 0;
-  font-size: 64px;
-  line-height: 70px;
-  font-weight: bold;
-
-  @media (max-width: 1024px) {
-    margin: 24px 0;
-    font-size: 42px;
-    line-height: 42px;
-  }
-
-  @media (max-width: 768px) {
-    font-size: 38px;
-    line-height: 38px;
-  }
-
-  @media (max-width: 400px) {
-    font-size: 32px;
-    line-height: 32px;
-  }
+.glass-panel {
+  border: 1px solid color-mix(in oklch, var(--border), white 28%);
+  box-shadow: var(--shadow);
+  background: color-mix(in oklch, var(--surface), white 12%);
+  backdrop-filter: blur(18px);
 }
 
-p {
-  margin: 24px 0;
-
-  @media (max-width: 1024px) {
-    margin: calc(var(--base) * 0.75) 0;
-  }
+.sprout-shell {
+  border: 1px solid color-mix(in oklch, var(--border), white 20%);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(250, 253, 255, 0.82));
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.6) inset,
+    0 18px 60px rgba(15, 23, 42, 0.14);
 }
 
-a {
-  color: currentColor;
-
-  &:focus {
-    opacity: 0.8;
-    outline: none;
-  }
-
-  &:active {
-    opacity: 0.7;
-    outline: none;
-  }
+.sprout-shell::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(120px 120px at 12% 38%, rgba(20, 184, 166, 0.13), transparent),
+    radial-gradient(160px 160px at 88% 20%, rgba(56, 189, 248, 0.12), transparent);
+  pointer-events: none;
+  z-index: -1;
 }
 
-svg {
-  vertical-align: middle;
+.sprout-divider {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    color-mix(in oklch, var(--border), white 10%),
+    transparent
+  );
 }
 
-.home {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+.brand-badge {
+  background: linear-gradient(
+    135deg,
+    color-mix(in oklch, var(--primary), white 10%),
+    color-mix(in oklch, var(--secondary), white 12%)
+  );
+  color: oklch(0.22 0.03 140);
+  border: 1px solid color-mix(in oklch, var(--primary), var(--secondary));
+  box-shadow:
+    0 10px 30px rgba(16, 185, 129, 0.2),
+    0 1px 0 rgba(255, 255, 255, 0.65) inset;
+}
+
+.sprout-pill {
+  display: inline-flex;
   align-items: center;
-  height: 100vh;
-  padding: 45px;
-  max-width: 1024px;
-  margin: 0 auto;
-  overflow: hidden;
+  gap: 0.35rem;
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  background: color-mix(in oklch, var(--secondary), white 80%);
+  color: color-mix(in oklch, var(--secondary), black 20%);
+  border: 1px solid color-mix(in oklch, var(--secondary), white 40%);
+}
 
-  @media (max-width: 400px) {
-    padding: 24px;
-  }
+.sprout-card {
+  border-radius: 28px;
+  border: 1px solid color-mix(in oklch, var(--border), white 16%);
+  background: color-mix(in oklch, var(--surface), white 8%);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.6) inset,
+    var(--shadow);
+}
 
-  .content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    flex-grow: 1;
+.sprout-metric {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.75rem;
+  border-radius: 12px;
+  background: color-mix(in oklch, var(--primary), white 80%);
+  color: color-mix(in oklch, var(--primary), black 16%);
+}
 
-    h1 {
-      text-align: center;
-    }
-  }
-
-  .links {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-
-    a {
-      text-decoration: none;
-      padding: 0.25rem 0.5rem;
-      border-radius: 4px;
-    }
-
-    .admin {
-      color: rgb(0, 0, 0);
-      background: rgb(1000, 1000, 1000);
-      border: 1px solid rgb(0, 0, 0);
-    }
-
-    .docs {
-      color: rgb(1000, 1000, 1000);
-      background: rgb(0, 0, 0);
-      border: 1px solid rgb(1000, 1000, 1000);
-    }
-  }
-
-  .footer {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-
-    @media (max-width: 1024px) {
-      flex-direction: column;
-      gap: 6px;
-    }
-
-    p {
-      margin: 0;
-    }
-
-    .codeLink {
-      text-decoration: none;
-      padding: 0 0.5rem;
-      background: rgb(60, 60, 60);
-      border-radius: 4px;
-    }
-  }
+.sprout-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 10px;
+  background: color-mix(in oklch, var(--accent), white 82%);
+  color: color-mix(in oklch, var(--accent), black 10%);
 }
