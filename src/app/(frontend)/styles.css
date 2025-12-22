@@ -1,5 +1,6 @@
 @import 'tailwindcss';
 @import '@heroui/styles';
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@400;700&display=swap');
 
 :root {
   color-scheme: light;
@@ -34,6 +35,7 @@
   --color-surface: var(--surface);
   --color-muted: var(--muted);
   --color-darl: var(--dark);
+  --font-prompt: "Prompt", sans-serif;
 }
 
 body {
@@ -145,4 +147,43 @@ body {
   border-radius: 10px;
   background: color-mix(in oklch, var(--accent), white 82%);
   color: color-mix(in oklch, var(--accent), black 10%);
+}
+
+@layer base {
+  h1 {
+    @apply font-prompt font-bold text-[3.5rem] leading-21;
+  }
+  h2 {
+    @apply font-prompt font-bold text-[2.875rem] leading-17.25;
+  }
+  h3 {
+    @apply font-prompt font-bold text-[2.375rem] leading-14.25;
+  }
+  h4 {
+    @apply font-prompt font-bold text-[2rem] leading-12;
+  }
+  h5 {
+    @apply font-prompt font-bold text-[1.625rem] leading-9.75;
+  }
+  h6 {
+    @apply font-prompt font-bold text-[1.375rem] leading-8.25;
+  }
+  b1 {
+    @apply font-prompt font-medium text-[1.125rem] leading-6.75;
+  }
+  b2 {
+    @apply font-prompt font-normal text-[1rem] leading-6;
+  }
+  b3 {
+    @apply font-prompt font-normal text-[0.875rem] leading-5.25;
+  }
+  b4 {
+    @apply font-prompt font-normal text-[0.75rem] leading-4.5;
+  }
+  b5 {
+    @apply font-prompt font-normal text-[0.625rem] leading-3.75;
+  }
+  b6 {
+    @apply font-prompt font-normal text-[0.5rem] leading-3;
+  }
 }

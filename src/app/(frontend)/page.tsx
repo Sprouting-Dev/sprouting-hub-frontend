@@ -9,6 +9,9 @@ export default function HomePage() {
   return (
     <div className="flex flex-col gap-5">
       <div className="flex items-center gap-3">
+        <h1>Test</h1>
+        <b1>Test</b1>
+        <b4>Test</b4>
         <Button label="Button" color="natural" size="sm" variant="pill" />
         <Button label="Button" color="primary" size="md" variant="pill" />
         <Button label="Button" color="secondary" size="lg" variant="pill" />
