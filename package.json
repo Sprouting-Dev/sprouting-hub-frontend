@@ -25,6 +25,7 @@
     "@payloadcms/richtext-lexical": "3.68.5",
     "@payloadcms/ui": "3.68.5",
     "@tailwindcss/postcss": "^4.1.18",
+    "clsx": "^2.1.1",
     "cross-env": "^7.0.3",
     "dotenv": "16.4.7",
     "graphql": "^16.8.1",
@@ -34,6 +35,7 @@
     "react": "19.2.1",
     "react-dom": "19.2.1",
     "sharp": "0.34.2",
+    "tailwind-merge": "^3.4.0",
     "tailwind-variants": "^3.2.2"
   },
   "devDependencies": {
