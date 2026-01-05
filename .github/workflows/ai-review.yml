@@ -18,7 +18,7 @@ jobs:
           fetch-depth: 0
 
       - name: Code Review
-        uses: google-gemini-pro-code-review-action@v1
+        uses: anc95/ai-code-review-action@v1
         with:
           gemini_api_key: ${{ secrets.GEMINI_API_KEY }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
