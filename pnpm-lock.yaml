@@ -29,6 +29,9 @@ importers:
       '@tailwindcss/postcss':
         specifier: ^4.1.18
         version: 4.1.18
+      clsx:
+        specifier: ^2.1.1
+        version: 2.1.1
       cross-env:
         specifier: ^7.0.3
         version: 7.0.3
@@ -56,9 +59,12 @@ importers:
       sharp:
         specifier: 0.34.2
         version: 0.34.2
+      tailwind-merge:
+        specifier: ^3.4.0
+        version: 3.4.0
       tailwind-variants:
         specifier: ^3.2.2
-        version: 3.2.2(tailwind-merge@3.3.1)(tailwindcss@4.1.18)
+        version: 3.2.2(tailwind-merge@3.4.0)(tailwindcss@4.1.18)
     devDependencies:
       '@playwright/test':
         specifier: 1.56.1
@@ -4717,6 +4723,9 @@ packages:
 
   tailwind-merge@3.3.1:
     resolution: {integrity: sha512-gBXpgUm/3rp1lMZZrM/w7D8GKqshif0zAymAhbCyIt8KMe+0v9DQ7cdYLR4FHH/cKpdTXb+A/tKKU3eolfsI+g==}
+
+  tailwind-merge@3.4.0:
+    resolution: {integrity: sha512-uSaO4gnW+b3Y2aWoWfFpX62vn2sR3skfhbjsEnaBI81WD1wBLlHZe5sWf0AqjksNdYTbGBEd0UasQMT3SNV15g==}
 
   tailwind-variants@3.1.1:
     resolution: {integrity: sha512-ftLXe3krnqkMHsuBTEmaVUXYovXtPyTK7ckEfDRXS8PBZx0bAUas+A0jYxuKA5b8qg++wvQ3d2MQ7l/xeZxbZQ==}
@@ -10629,17 +10638,19 @@ snapshots:
 
   tailwind-merge@3.3.1: {}
 
+  tailwind-merge@3.4.0: {}
+
   tailwind-variants@3.1.1(tailwind-merge@3.3.1)(tailwindcss@4.1.18):
     dependencies:
       tailwindcss: 4.1.18
     optionalDependencies:
       tailwind-merge: 3.3.1
 
-  tailwind-variants@3.2.2(tailwind-merge@3.3.1)(tailwindcss@4.1.18):
+  tailwind-variants@3.2.2(tailwind-merge@3.4.0)(tailwindcss@4.1.18):
     dependencies:
       tailwindcss: 4.1.18
     optionalDependencies:
-      tailwind-merge: 3.3.1
+      tailwind-merge: 3.4.0
 
   tailwindcss@4.1.18: {}
 
