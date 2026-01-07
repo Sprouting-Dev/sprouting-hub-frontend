@@ -4,7 +4,18 @@ import React from 'react'
 import { Button } from '@/components/commons/button'
 import { Badge } from '@/components/commons/badge'
 import { Feature } from '@/components/commons/feature'
-import { CodeIcon, Database, Cpu, Globe, CheckCircle, Bot, Sparkles, TrendingUp, Clock } from 'lucide-react'
+import { TestimonialCard } from '@/components/commons/testimonial-Card'
+import {
+  CodeIcon,
+  Database,
+  Cpu,
+  Globe,
+  CheckCircle,
+  Bot,
+  Sparkles,
+  TrendingUp,
+  Clock,
+} from 'lucide-react'
 
 import './styles.css'
 
@@ -57,6 +68,29 @@ export default function HomePage() {
           title="Tailored Innovation"
           detail="Custom solutions engineered specifically to solve your unique business challenges."
         />
+      </div>
+
+      {/* Testimonial Cards */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pr-10 pl-10 ">
+        <TestimonialCard
+          avatar="NS"
+          title="Natthakit Saetan"
+          subtitle="General Manager"
+          detail="เนื้อหาออกแบบมาให้ใช้งานได้ง่าย สามารถนำไปใช้จริงได้ง่าย สามารถนำไปใช้จริงอย่างได้ Workflow อัตโนมัติได้จริง ๆ"
+        />
+          <TestimonialCard
+          avatar="NS"
+          title="Natthakit Saetan"
+          subtitle="General Manager"
+          detail="เนื้อหาออกแบบมาให้ใช้งานได้ง่าย สามารถนำไปใช้จริงได้ง่าย สามารถนำไปใช้จริงอย่างได้ Workflow อัตโนมัติได้จริง ๆ"
+        />
+          <TestimonialCard
+          avatar="NS"
+          title="Natthakit Saetan"
+          subtitle="General Manager"
+          detail="เนื้อหาออกแบบมาให้ใช้งานได้ง่าย สามารถนำไปใช้จริงได้ง่าย สามารถนำไปใช้จริงอย่างได้ Workflow อัตโนมัติได้จริง ๆ"
+        />
+        
       </div>
     </div>
   )
