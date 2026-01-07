@@ -92,28 +92,27 @@ export default function HomePage() {
           />
         </div>
 
-      {/* Testimonial Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pr-10 pl-10 ">
-        <TestimonialCard
-          avatar="NS"
-          title="Natthakit Saetan"
-          subtitle="General Manager"
-          detail="เนื้อหาออกแบบมาให้ใช้งานได้ง่าย สามารถนำไปใช้จริงได้ง่าย สามารถนำไปใช้จริงอย่างได้ Workflow อัตโนมัติได้จริง ๆ"
-        />
-        <TestimonialCard
-          avatar="NS"
-          title="Natthakit Saetan"
-          subtitle="General Manager"
-          detail="เนื้อหาออกแบบมาให้ใช้งานได้ง่าย สามารถนำไปใช้จริงได้ง่าย สามารถนำไปใช้จริงอย่างได้ Workflow อัตโนมัติได้จริง ๆ"
-        />
-        <TestimonialCard
-          avatar="NS"
-          title="Natthakit Saetan"
-          subtitle="General Manager"
-          detail="เนื้อหาออกแบบมาให้ใช้งานได้ง่าย สามารถนำไปใช้จริงได้ง่าย สามารถนำไปใช้จริงอย่างได้ Workflow อัตโนมัติได้จริง ๆ"
-        />
-      </div>
-      
+        {/* Testimonial Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pr-10 pl-10 ">
+          <TestimonialCard
+            avatar="NS"
+            title="Natthakit Saetan"
+            subtitle="General Manager"
+            detail="เนื้อหาออกแบบมาให้ใช้งานได้ง่าย สามารถนำไปใช้จริงได้ง่าย สามารถนำไปใช้จริงอย่างได้ Workflow อัตโนมัติได้จริง ๆ"
+          />
+          <TestimonialCard
+            avatar="NS"
+            title="Natthakit Saetan"
+            subtitle="General Manager"
+            detail="เนื้อหาออกแบบมาให้ใช้งานได้ง่าย สามารถนำไปใช้จริงได้ง่าย สามารถนำไปใช้จริงอย่างได้ Workflow อัตโนมัติได้จริง ๆ"
+          />
+          <TestimonialCard
+            avatar="NS"
+            title="Natthakit Saetan"
+            subtitle="General Manager"
+            detail="เนื้อหาออกแบบมาให้ใช้งานได้ง่าย สามารถนำไปใช้จริงได้ง่าย สามารถนำไปใช้จริงอย่างได้ Workflow อัตโนมัติได้จริง ๆ"
+          />
+        </div>
       </div>
     </div>
   )
