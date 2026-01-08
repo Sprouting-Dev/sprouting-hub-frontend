@@ -4,7 +4,7 @@ import React from 'react'
 import { Button } from '@/components/commons/button'
 import { Badge } from '@/components/commons/badge'
 import { Feature } from '@/components/commons/feature'
-import { TestimonialCard } from '@/components/commons/testimonial-Card'
+import { TestimonialCard } from '@/components/cards/testimonialCard'
 import {
   CodeIcon,
   Database,
@@ -78,19 +78,18 @@ export default function HomePage() {
           subtitle="General Manager"
           detail="เนื้อหาออกแบบมาให้ใช้งานได้ง่าย สามารถนำไปใช้จริงได้ง่าย สามารถนำไปใช้จริงอย่างได้ Workflow อัตโนมัติได้จริง ๆ"
         />
-          <TestimonialCard
+        <TestimonialCard
           avatar="NS"
           title="Natthakit Saetan"
           subtitle="General Manager"
           detail="เนื้อหาออกแบบมาให้ใช้งานได้ง่าย สามารถนำไปใช้จริงได้ง่าย สามารถนำไปใช้จริงอย่างได้ Workflow อัตโนมัติได้จริง ๆ"
         />
-          <TestimonialCard
+        <TestimonialCard
           avatar="NS"
           title="Natthakit Saetan"
           subtitle="General Manager"
           detail="เนื้อหาออกแบบมาให้ใช้งานได้ง่าย สามารถนำไปใช้จริงได้ง่าย สามารถนำไปใช้จริงอย่างได้ Workflow อัตโนมัติได้จริง ๆ"
         />
-        
       </div>
     </div>
   )
