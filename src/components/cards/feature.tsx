@@ -1,5 +1,5 @@
 import React from 'react';
-import { cn } from './util/cn';
+import { cn } from '../commons/util/cn';
 
 interface FeatureProps {
   icon: React.ReactNode;
