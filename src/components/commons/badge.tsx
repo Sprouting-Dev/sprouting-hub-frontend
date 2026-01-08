@@ -7,7 +7,7 @@ interface BadgeProps {
   className?: string;
 }
 
-export const Badge: React.FC<BadgeProps> = ({ icon, text, className }) => {
+export const Badge = ({ icon, text, className } : BadgeProps) => {
   return (
     <div 
       className={cn('inline-flex items-center gap-2 px-4 py-2 rounded-full shadow-sm text-gray-700 font-medium text-sm',

@@ -8,7 +8,7 @@ interface FeatureProps {
   className?: string;
 }
 
-export const Feature: React.FC<FeatureProps> = ({ icon, title, detail, className }) => {
+export const Feature = ({ icon, title, detail, className } : FeatureProps) => {
   return (
     <div 
       className={cn('flex flex-col items-center text-center py-5 w-auto rounded-2xl shadow-md',
