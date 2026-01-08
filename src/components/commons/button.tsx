@@ -12,10 +12,10 @@ const customButtonVariants = tv({
       accent: "bg-accent hover:bg-hover-accent",
     },
     size: {
-      sm: "w-14 h-6 text-xs",
-      md: "w-17 h-8 text-sm",
-      lg: "w-19 h-12 text-sm",
-      xl: "w-25 h-16 text-base",
+      sm: "min-w-14 w-auto h-6 text-xs",
+      md: "min-w-17 w-auto h-8 text-sm",
+      lg: "min-w-19 w-auto h-12 text-sm",
+      xl: "min-w-25 w-auto h-16 text-base",
     },
     variant: {
       pill: "rounded-full",
