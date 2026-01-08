@@ -1,4 +1,3 @@
-import React from 'react';
 import { cn } from './util/cn';
 import { ArrowRight } from 'lucide-react';
 
@@ -10,7 +9,7 @@ interface CardProps {
   className?: string;
 }
 
-export const Card: React.FC<CardProps> = ({ image, icon, title, detail, className }) => {
+export const Card = ({ image, icon, title, detail, className } : CardProps) => {
   return (
     <div 
       className={cn('group flex flex-col rounded-3xl overflow-hidden shadow-md transition-all h-full',
