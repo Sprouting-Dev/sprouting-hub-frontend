@@ -6,6 +6,7 @@ import { Badge } from '@/components/commons/badge'
 import { Feature } from '@/components/cards/feature'
 import { Card } from '@/components/cards/card'
 import { TestimonialCard } from '@/components/cards/testimonialCard'
+import { HorizonCard } from '@/components/cards/horizonCard'
 import {
   CodeIcon,
   Database,
@@ -91,6 +92,7 @@ export default function HomePage() {
             detail="From web applications to complex enterprise systems, our full-stack team delivers robust, scalable, and high-performance software tailored to your needs."
           />
         </div>
+      </div>
 
       {/* Testimonial Cards */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pr-10 pl-10 ">
@@ -113,7 +115,23 @@ export default function HomePage() {
           detail="เนื้อหาออกแบบมาให้ใช้งานได้ง่าย สามารถนำไปใช้จริงได้ง่าย สามารถนำไปใช้จริงอย่างได้ Workflow อัตโนมัติได้จริง ๆ"
         />
       </div>
-      
+
+      {/* Horizon Cards */}
+      <div className="flex flex-col gap-6 p-10 max-w-[55%]">
+        <HorizonCard
+          image="/images/academy-laptop.png"
+          title="Sprouting Tech Academy"
+          detail="A premier coding bootcamp designed to bridge the gap between theory and industry practice. We train the next wave of full-stack developers with hands-on, project-based learning."
+          tag="Education"
+          buttonTitle="Visit Academy"
+        />
+        <HorizonCard
+          image="/images/wiivor-laptop.png"
+          title="Wiivor"
+          detail="An innovative management solution designed to streamline team collaboration and project tracking. Wiivor brings clarity to chaos with its intuitive dashboard and AI-driven insights."
+          tag="AI Generative Platform"
+          buttonTitle="Explore Wiivor"
+        />
       </div>
     </div>
   )
