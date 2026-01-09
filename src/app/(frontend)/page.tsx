@@ -6,7 +6,6 @@ import { Badge } from '@/components/commons/badge'
 import { Feature } from '@/components/cards/feature'
 import { Card } from '@/components/cards/card'
 import { TestimonialCard } from '@/components/cards/testimonialCard'
-import { Navbar } from '@/components/layout'
 import {
   CodeIcon,
   Database,
@@ -19,24 +18,12 @@ import {
   Clock,
   Monitor,
 } from 'lucide-react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 import './styles.css'
 
 export default function HomePage() {
   return (
     <div className="flex flex-col gap-5">
-      <Router>
-        <div className="min-h-screen bg-gray-50">
-          <Navbar />
-
-          <Routes>
-            <Route path="/" />
-            <Route path="/services" />
-            <Route path="/products" />
-            <Route path="/about" />
-            <Route path="/contact" />
-          </Routes>
 
           {/* Button */}
           <div className="flex items-center gap-3 p-2">
@@ -125,8 +112,7 @@ export default function HomePage() {
               detail="เนื้อหาออกแบบมาให้ใช้งานได้ง่าย สามารถนำไปใช้จริงได้ง่าย สามารถนำไปใช้จริงอย่างได้ Workflow อัตโนมัติได้จริง ๆ"
             />
           </div>
-        </div>
-      </Router>
+          
     </div>
   )
 }
