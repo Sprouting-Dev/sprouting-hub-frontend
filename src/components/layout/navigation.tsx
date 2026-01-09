@@ -7,7 +7,7 @@ import logoImg from '../../public/Logo.png';
 import { usePathname } from 'next/navigation';
 import { Button } from '@/components/commons/button'
 import { Globe } from 'lucide-react';
-import { cn } from '../commons/util/cn';
+import { cn } from '../../util/cn';
 
 export const Navbar = () => {
   const pathname = usePathname();

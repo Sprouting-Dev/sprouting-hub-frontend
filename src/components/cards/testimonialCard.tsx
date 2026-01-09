@@ -1,5 +1,5 @@
 import { Star } from 'lucide-react'
-import { cn } from '../commons/util/cn'
+import { cn } from '../../util/cn'
 
 interface TestimonialCardProps {
   avatar: string
