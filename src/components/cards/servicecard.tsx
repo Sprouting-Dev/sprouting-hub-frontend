@@ -1,7 +1,7 @@
-import { cn } from '../commons/util/cn';
+import { cn } from '../../util/cn';
 import { ArrowRight } from 'lucide-react';
 
-interface CardProps {
+interface ServiceCardProps {
   image: string;
   icon: React.ReactNode;
   title: string;
@@ -9,7 +9,7 @@ interface CardProps {
   className?: string;
 }
 
-export const Card = ({ image, icon, title, detail, className } : CardProps) => {
+export const ServiceCard = ({ image, icon, title, detail, className } : ServiceCardProps) => {
   return (
     <div 
       className={cn('group flex flex-col rounded-3xl overflow-hidden shadow-md transition-all h-full',

@@ -1,14 +1,14 @@
 import React from 'react';
-import { cn } from '../commons/util/cn';
+import { cn } from '../../util/cn';
 
-interface FeatureProps {
+interface FeatureCardProps {
   icon: React.ReactNode;
   title: string;
   detail: string;
   className?: string;
 }
 
-export const Feature = ({ icon, title, detail, className } : FeatureProps) => {
+export const FeatureCard = ({ icon, title, detail, className } : FeatureCardProps) => {
   return (
     <div 
       className={cn('flex flex-col items-center text-center py-5 w-auto rounded-2xl shadow-md',

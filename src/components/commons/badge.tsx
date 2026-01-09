@@ -1,5 +1,5 @@
 import React from 'react';
-import { cn } from './util/cn';
+import { cn } from '../../util/cn';
 
 interface BadgeProps {
   icon: React.ReactNode;
