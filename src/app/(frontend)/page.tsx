@@ -114,21 +114,23 @@ export default function HomePage() {
       </div>
 
       {/* Horizon Cards */}
-      <div className="flex flex-col gap-6 p-10 max-w-[55%]">
-        <HorizonCard
-          image="/images/academy-laptop.png"
-          title="Sprouting Tech Academy"
-          detail="A premier coding bootcamp designed to bridge the gap between theory and industry practice. We train the next wave of full-stack developers with hands-on, project-based learning."
-          tag="Education"
-          buttonTitle="Visit Academy"
-        />
-        <HorizonCard
-          image="/images/wiivor-laptop.png"
-          title="Wiivor"
-          detail="An innovative management solution designed to streamline team collaboration and project tracking. Wiivor brings clarity to chaos with its intuitive dashboard and AI-driven insights."
-          tag="AI Generative Platform"
-          buttonTitle="Explore Wiivor"
-        />
+      <div className="flex justify-center items-center p-10">
+        <div className="flex flex-col gap-5 w-full max-w-5xl">
+          <HorizonCard
+            image="/images/academy-laptop.png"
+            title="Sprouting Tech Academy"
+            detail="Sprouting Tech Academy is a specialized professional learning institution dedicated to advancing expertise in AI and Workflow Automation. Our curriculum is designed around industry-leading platforms, including Make.com and n8n, equipping learners with the technical proficiency and strategic mindset required to lead in an increasingly automated digital economy."
+            tag="Education"
+            buttonTitle="Visit Academy"
+          />
+          <HorizonCard
+            image="/images/wiivor-laptop.png"
+            title="Wiivor"
+            detail="Wiivor is an intelligent, AI-driven web development ecosystem designed to bridge the gap between concept and execution. By articulating your requirements in natural language, our advanced generative AI engine accurately interprets your vision and delivers fully functional, production-ready websites—removing the traditional complexities of coding, design, and infrastructure management."
+            tag="AI Generative Platform"
+            buttonTitle="Explore Wiivor"
+          />
+        </div>
       </div>
     </div>
   )
