@@ -10,16 +10,21 @@ interface TestimonialCardProps {
 }
 const TestimonialCard = ({ avatar, title, subtitle, detail, className }: TestimonialCardProps) => {
   return (
-    <div className={cn('sprout-card p-6 flex flex-col gap-4', className)}>
+    <div
+      className={cn(
+        'w-96 h-[266px] rounded-[14px] p-4 flex flex-col gap-4 border border-gray-200 sprout-shadow-md',
+        className,
+      )}
+    >
       {/* Header */}
       <div className="flex items-center gap-3">
         {/* Avatar */}
-        <div className="w-10 h-10 rounded-full bg-spt-primary-400 border-2 border-spt-secondary-400 flex items-center justify-center text-spt-neutral-1000 font-bold">
+        <div className="w-12 h-12 rounded-full bg-natural flex items-center justify-center text-[#333333] font-bold text-sm">
           {avatar}
         </div>
         <div className="flex flex-col">
-          <h6 className="text-spt-neutral-1000">{title}</h6>
-          <span className="text-spt-neutral-500 text-sm">{subtitle}</span>
+          <h6 className="text-gray-900 font-semibold text-base">{title}</h6>
+          <span className="text-gray-500 text-sm">{subtitle}</span>
         </div>
       </div>
       {/* Rating Stars */}
@@ -29,7 +34,7 @@ const TestimonialCard = ({ avatar, title, subtitle, detail, className }: Testimo
         ))}
       </div>
       {/* Review Detail */}
-      <p className="text-spt-neutral-800 text-base">{detail}</p>
+      <p className="text-gray-700 text-sm leading-relaxed">{detail}</p>
     </div>
   )
 }
