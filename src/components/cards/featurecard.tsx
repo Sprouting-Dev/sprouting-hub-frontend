@@ -20,11 +20,11 @@ export const FeatureCard = ({ icon, title, detail, className }: FeatureCardProps
         {icon}
       </div>
       
-      <h6 className="text-2xl text-natural mb-3">
+      <h6 className="text-2xl text-hover-natural mb-3">
         {title}
       </h6>
       
-      <b2 className="text-neutral-800 font-normal">
+      <b2 className="text-[#5E5E5E] font-normal">
         {detail}
       </b2>
     </div>
