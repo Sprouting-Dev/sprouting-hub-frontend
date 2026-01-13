@@ -30,7 +30,7 @@ const HorizonCard = ({ image, title, detail, tag, buttonTitle, className }: Hori
         <h3 className="text-surface text-2xl font-bold">{title}</h3>
         <p className="text-muted text-base text-surface leading-relaxed pr-8">{detail}</p>
         <div className="mt-5">
-          <button className="flex items-center justify-center gap-3 px-6 mt-4 py-2 border-2 rounded-full bg-transparent transition-all duration-300 hover:scale-105 active:scale-95 font-medium border-primary text-primary hover:bg-primary hover:text-white">
+          <button className="flex items-center justify-center gap-3 px-6 mt-4 py-2 border-1 rounded-full bg-transparent transition-all duration-300 hover:scale-105 active:scale-95 font-medium border-primary text-primary hover:bg-primary hover:text-white">
             {buttonTitle}
             <SquareArrowOutUpRight size={20} />
           </button>
