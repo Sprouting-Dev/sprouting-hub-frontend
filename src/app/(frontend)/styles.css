@@ -34,8 +34,8 @@
   --color-hover-accent: var(--hover-accent);
   --color-surface: var(--surface);
   --color-muted: var(--muted);
-  --color-darl: var(--dark);
-  --font-prompt: "Prompt", sans-serif;
+  --color-dark: var(--dark);
+  --font-prompt: 'Prompt', sans-serif;
 }
 
 body {
@@ -147,6 +147,17 @@ body {
   border-radius: 10px;
   background: color-mix(in oklch, var(--accent), white 82%);
   color: color-mix(in oklch, var(--accent), black 10%);
+}
+
+.sprout-horizon-card {
+  max-width: 1216px;
+  min-height: 326px;
+  border-radius: 28px;
+  border: 1px solid color-mix(in oklch, var(--border), white 16%);
+  background: color-mix(in oklch, var(--surface), white 8%);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.6) inset,
+    var(--shadow);
 }
 
 @layer base {

@@ -115,16 +115,16 @@ export default function HomePage() {
 
       {/* Horizon Cards */}
       <div className="flex justify-center items-center p-10">
-        <div className="flex flex-col gap-5 w-full max-w-5xl">
+        <div className="flex flex-col gap-5 w-full items-center">
           <HorizonCard
-            image="/images/academy-laptop.png"
+            image="/images/sprouting_academy_thum.png"
             title="Sprouting Tech Academy"
             detail="Sprouting Tech Academy is a specialized professional learning institution dedicated to advancing expertise in AI and Workflow Automation. Our curriculum is designed around industry-leading platforms, including Make.com and n8n, equipping learners with the technical proficiency and strategic mindset required to lead in an increasingly automated digital economy."
             tag="Education"
             buttonTitle="Visit Academy"
           />
           <HorizonCard
-            image="/images/wiivor-laptop.png"
+            image="/images/wiivor_mockup_banner.png"
             title="Wiivor"
             detail="Wiivor is an intelligent, AI-driven web development ecosystem designed to bridge the gap between concept and execution. By articulating your requirements in natural language, our advanced generative AI engine accurately interprets your vision and delivers fully functional, production-ready websites—removing the traditional complexities of coding, design, and infrastructure management."
             tag="AI Generative Platform"
