@@ -45,7 +45,7 @@ export const Navbar = () => {
                 href={item.path}
                 className={cn(
                   "text-base font-normal font-prompt transition-colors hover:text-natural",
-                  isActive ? "text-natural" : "text-neutral-500"
+                  isActive ? "text-natural" : "text-[#9F9F9F]"
                 )}
               >
                 {item.name}
@@ -54,7 +54,7 @@ export const Navbar = () => {
           })}
         </div>
 
-        <div className="hidden md:block w-[2px] h-6 bg-neutral-200 mr-8"></div>
+        <div className="hidden md:block w-[2px] h-6 bg-[#DFDFDF] mr-8"></div>
 
         <div className="flex items-center gap-6">
           <div className="flex items-center gap-2 text-sm font-semibold leading-5 font-prompt select-none">
@@ -69,13 +69,13 @@ export const Navbar = () => {
               EN
             </span>
 
-            <span className="w-[2px] h-6 bg-neutral-200 mx-1"></span>
+            <span className="w-[2px] h-6 bg-[#DFDFDF] mx-1"></span>
 
             <span
               onClick={() => setCurrentLang('TH')}
               className={cn(
                 "cursor-pointer transition-colors",
-                currentLang === 'TH' ? "text-natural" : "text-neutral-500 hover:text-natural"
+                currentLang === 'TH' ? "text-natural" : "text-[#9F9F9F] hover:text-natural"
               )}
             >
               TH
