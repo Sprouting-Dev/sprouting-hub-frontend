@@ -23,8 +23,8 @@ const HorizonCard = ({ image, title, detail, tag, buttonTitle, className }: Hori
         <img src={image} alt={title} className="w-full h-full object-cover" />
       </div>
       {/* Content - Right Side */}
-      <div className="flex-1 flex flex-col justify-center gap-2 p-8 bg-dark">
-        <a href="#" className="text-primary text-sm font-bold uppercase tracking-wider underline">
+      <div className="flex-1 flex flex-col justify-center gap-2 p-8 bg-spt-neutral-900">
+        <a href="#" className="text-spt-secondary-400 text-sm font-bold uppercase tracking-wider underline">
           {tag}
         </a>
         <h3 className="text-surface text-2xl font-bold">{title}</h3>
