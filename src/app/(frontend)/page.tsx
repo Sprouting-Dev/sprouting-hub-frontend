@@ -1,7 +1,6 @@
 'use client'
 
 import React from 'react'
-import { Button } from '@/components/commons/button'
 import { Badge } from '@/components/commons/badge'
 import { FeatureCard } from '@/components/cards/featurecard'
 import { ServiceCard } from '@/components/cards/servicecard'
@@ -25,29 +24,6 @@ import './styles.css'
 export default function HomePage() {
   return (
     <div className="flex flex-col gap-5">
-      {/* Button */}
-      <div className="flex items-center gap-3 p-2">
-        <Button label="Button" color="natural" size="sm" variant="pill" />
-        <Button label="Button" color="primary" size="md" variant="pill" />
-        <Button label="Button" color="secondary" size="lg" variant="pill" />
-        <Button label="Button" color="accent" size="xl" variant="pill" />
-      </div>
-      <div className="flex items-center gap-3 p-2">
-        <Button label="Button" color="accent" size="sm" variant="rounded" />
-        <Button label="Button" color="secondary" size="md" variant="rounded" />
-        <Button label="Button" color="primary" size="lg" variant="rounded" />
-        <Button label="Button" color="natural" size="xl" variant="rounded" />
-      </div>
-
-      {/* Badge */}
-      <div className="flex items-center gap-3 justify-center flex-wrap p-5">
-        <Badge icon={<CodeIcon />} text="React / Next.js" />
-        <Badge icon={<Database />} text="PostgreSQL" />
-        <Badge icon={<Cpu />} text="Python AI" />
-        <Badge icon={<Globe />} text="Cloud Native" />
-        <Badge icon={<CheckCircle />} text="Tailwind CSS" />
-        <Badge icon={<CodeIcon />} text="TypeScript" />
-      </div>
 
       {/* Feature Card */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 p-10">
@@ -91,28 +67,6 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* Testimonial Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pr-10 pl-10 pb-10">
-        <TestimonialCard
-          avatar="NS"
-          title="Natthakit Saetan"
-          subtitle="General Manager"
-          detail="เนื้อหาออกแบบมาให้ใช้งานได้ง่าย สามารถนำไปใช้จริงได้ง่าย สามารถนำไปใช้จริงอย่างได้ Workflow อัตโนมัติได้จริง ๆ"
-        />
-        <TestimonialCard
-          avatar="NS"
-          title="Natthakit Saetan"
-          subtitle="General Manager"
-          detail="เนื้อหาออกแบบมาให้ใช้งานได้ง่าย สามารถนำไปใช้จริงได้ง่าย สามารถนำไปใช้จริงอย่างได้ Workflow อัตโนมัติได้จริง ๆ"
-        />
-        <TestimonialCard
-          avatar="NS"
-          title="Natthakit Saetan"
-          subtitle="General Manager"
-          detail="เนื้อหาออกแบบมาให้ใช้งานได้ง่าย สามารถนำไปใช้จริงได้ง่าย สามารถนำไปใช้จริงอย่างได้ Workflow อัตโนมัติได้จริง ๆ"
-        />
-      </div>
-
       {/* Horizon Cards */}
       <div className="flex justify-center items-center p-10">
         <div className="flex flex-col gap-5 w-full items-center">
@@ -132,6 +86,38 @@ export default function HomePage() {
           />
         </div>
       </div>
+          {/* Badge */}
+          <div className="flex items-center gap-3 justify-center flex-wrap p-5">
+            <Badge icon={<CodeIcon />} text="React / Next.js" />
+            <Badge icon={<Database />} text="PostgreSQL" />
+            <Badge icon={<Cpu />} text="Python AI" />
+            <Badge icon={<Globe />} text="Cloud Native" />
+            <Badge icon={<CheckCircle />} text="Tailwind CSS" />
+            <Badge icon={<CodeIcon />} text="TypeScript" />
+          </div>
+
+          {/* Testimonial Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pr-10 pl-10 pb-10">
+            <TestimonialCard
+              avatar="NS"
+              title="Natthakit Saetan"
+              subtitle="General Manager"
+              detail="เนื้อหาออกแบบมาให้ใช้งานได้ง่าย สามารถนำไปใช้จริงได้ง่าย สามารถนำไปใช้จริงอย่างได้ Workflow อัตโนมัติได้จริง ๆ"
+            />
+            <TestimonialCard
+              avatar="NS"
+              title="Natthakit Saetan"
+              subtitle="General Manager"
+              detail="เนื้อหาออกแบบมาให้ใช้งานได้ง่าย สามารถนำไปใช้จริงได้ง่าย สามารถนำไปใช้จริงอย่างได้ Workflow อัตโนมัติได้จริง ๆ"
+            />
+            <TestimonialCard
+              avatar="NS"
+              title="Natthakit Saetan"
+              subtitle="General Manager"
+              detail="เนื้อหาออกแบบมาให้ใช้งานได้ง่าย สามารถนำไปใช้จริงได้ง่าย สามารถนำไปใช้จริงอย่างได้ Workflow อัตโนมัติได้จริง ๆ"
+            />
+          </div>
+          
     </div>
   )
 }

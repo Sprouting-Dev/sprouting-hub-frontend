@@ -30,7 +30,7 @@ export const Navbar = () => {
              className="w-19.25 h-8 object-contain"
              priority
            />
-           <span className="font-bold text-2xl bg-gradient-to-t from-primary to-natural bg-clip-text text-transparent pb-1 px-1 whitespace-nowrap">
+           <span className="font-bold text-2xl font-prompt bg-gradient-to-t from-primary to-natural bg-clip-text text-transparent px-1 whitespace-nowrap">
              Sprouting Tech
            </span>
         </Link>
@@ -44,7 +44,7 @@ export const Navbar = () => {
                 key={item.name}
                 href={item.path}
                 className={cn(
-                  "text-base font-normal transition-colors hover:text-natural",
+                  "text-base font-normal font-prompt transition-colors hover:text-natural",
                   isActive ? "text-natural" : "text-neutral-500"
                 )}
               >
@@ -57,7 +57,7 @@ export const Navbar = () => {
         <div className="hidden md:block w-[2px] h-6 bg-neutral-200 mr-8"></div>
 
         <div className="flex items-center gap-6">
-          <div className="flex items-center gap-2 text-sm font-semibold leading-5 select-none">
+          <div className="flex items-center gap-2 text-sm font-semibold leading-5 font-prompt select-none">
             <Globe className="w-4 h-4 text-primary" />
             <span
               onClick={() => setCurrentLang('EN')}
