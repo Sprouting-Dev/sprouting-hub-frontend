@@ -5,24 +5,16 @@
 :root {
   color-scheme: light;
 
-  /* Existing Project Colors */
-  --natural: oklch(0.4988 0.0919 221.68);
-  --hover-natural: oklch(0.336 0.0652 227.52);
-  --primary: oklch(0.6895 0.1256 176.55);
-  --hover-primary: oklch(0.4576 0.0821 176.49);
-  --secondary: oklch(0.7022 0.2004 45.1);
-  --hover-secondary: oklch(0.5827 0.164382 45.7959);
-  --accent: oklch(0.6471 0.2288 22.47);
-  --hover-accent: oklch(0.5404 0.2189 27.17);
-  --background: oklch(0.9702 0 0);
-  --surface: oklch(0.994 0.01 150);
-  --muted: oklch(0.47 0.03 145);
-  --border: oklch(0.89 0.02 145);
-  --shadow: 0 22px 70px rgba(15, 23, 42, 0.16);
-  --glow-emerald: rgba(20, 184, 166, 0.18);
-  --glow-sky: rgba(56, 189, 248, 0.18);
-  --glow-amber: rgba(245, 158, 11, 0.15);
-  --dark: oklch(0.3211 0 0);
+  /* Utility Variables (spt-* colors) */
+  --background: #ffffff;
+  --surface: var(--spt-neutral-100);
+  --border: var(--spt-neutral-200);
+  --shadow: var(--spt-elevation-3);
+  --glow-emerald: rgba(30, 231, 197, 0.18);
+  --glow-sky: rgba(105, 226, 255, 0.18);
+  --glow-amber: rgba(255, 107, 0, 0.15);
+  --primary: var(--spt-primary-300);
+  --secondary: var(--spt-secondary-300);
 
   /* - Colors */
   --spt-primary-100: #69e2ff;
@@ -116,17 +108,56 @@
 }
 
 @theme {
-  --color-natural: var(--natural);
-  --color-primary: var(--primary);
-  --color-secondary: var(--secondary);
-  --color-accent: var(--accent);
-  --color-hover-natural: var(--hover-natural);
-  --color-hover-primary: var(--hover-primary);
-  --color-hover-secondary: var(--hover-secondary);
-  --color-hover-accent: var(--hover-accent);
-  --color-surface: var(--surface);
-  --color-muted: var(--muted);
-  --color-dark: var(--dark);
+  /* Primary Colors */
+  --color-spt-primary-100: var(--spt-primary-100);
+  --color-spt-primary-200: var(--spt-primary-200);
+  --color-spt-primary-300: var(--spt-primary-300);
+  --color-spt-primary-400: var(--spt-primary-400);
+  --color-spt-primary-500: var(--spt-primary-500);
+  --color-spt-primary-10: var(--spt-primary-10);
+
+  /* Secondary Colors */
+  --color-spt-secondary-100: var(--spt-secondary-100);
+  --color-spt-secondary-200: var(--spt-secondary-200);
+  --color-spt-secondary-300: var(--spt-secondary-300);
+  --color-spt-secondary-400: var(--spt-secondary-400);
+  --color-spt-secondary-500: var(--spt-secondary-500);
+  --color-spt-secondary-10: var(--spt-secondary-10);
+
+  /* Neutral Colors */
+  --color-spt-neutral-100: var(--spt-neutral-100);
+  --color-spt-neutral-200: var(--spt-neutral-200);
+  --color-spt-neutral-300: var(--spt-neutral-300);
+  --color-spt-neutral-400: var(--spt-neutral-400);
+  --color-spt-neutral-500: var(--spt-neutral-500);
+  --color-spt-neutral-600: var(--spt-neutral-600);
+  --color-spt-neutral-700: var(--spt-neutral-700);
+  --color-spt-neutral-800: var(--spt-neutral-800);
+  --color-spt-neutral-900: var(--spt-neutral-900);
+  --color-spt-neutral-1000: var(--spt-neutral-1000);
+  --color-spt-neutral-10: var(--spt-neutral-10);
+
+  /* Accent Colors */
+  --color-spt-accent-100: var(--spt-accent-100);
+  --color-spt-accent-200: var(--spt-accent-200);
+  --color-spt-accent-300: var(--spt-accent-300);
+  --color-spt-accent-400: var(--spt-accent-400);
+  --color-spt-accent-500: var(--spt-accent-500);
+  --color-spt-accent-10: var(--spt-accent-10);
+  --color-spt-accent-50: var(--spt-accent-50);
+
+  /* Status Colors */
+  --color-spt-red-100: var(--spt-red-100);
+  --color-spt-red-200: var(--spt-red-200);
+  --color-spt-red-10: var(--spt-red-10);
+  --color-spt-yellow-100: var(--spt-yellow-100);
+  --color-spt-yellow-200: var(--spt-yellow-200);
+  --color-spt-yellow-10: var(--spt-yellow-10);
+  --color-spt-green-100: var(--spt-green-100);
+  --color-spt-green-200: var(--spt-green-200);
+  --color-spt-green-10: var(--spt-green-10);
+
+  /* Font Family */
   --font-prompt: 'Prompt', sans-serif;
 }
 
