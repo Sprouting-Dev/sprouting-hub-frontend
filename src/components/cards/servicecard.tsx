@@ -28,15 +28,15 @@ export const ServiceCard = ({ image, icon, title, detail, className } : ServiceC
       </div>
 
       <div className="p-6 pt-6 flex flex-col grow">
-        <h6 className=" text-gray-900">
+        <h6 className="text-2xl text-natural">
           {title}
         </h6>
         
-        <b3 className="text-gray-600 leading-relaxed mt-1 mb-6 line-clamp-3">
+        <b2 className="text-neutral-800 leading-relaxed mt-2 mb-6 line-clamp-3">
           {detail}
-        </b3>
+        </b2>
 
-        <div className="mt-auto flex items-center gap-2 text-primary font-bold text-sm cursor-pointer hover:opacity-80 transition-opacity">
+        <div className="mt-auto flex items-center gap-2 text-primary font-prompt font-semibold text-base cursor-pointer hover:opacity-80 transition-opacity">
           <span>Learn More</span>
           <ArrowRight className="w-4 h-4" />
         </div>

@@ -19,10 +19,14 @@ export const FeatureCard = ({ icon, title, detail, className }: FeatureCardProps
       <div className="bg-[#E0F2F1] text-primary p-4 rounded-xl mb-3 [&>svg]:w-8 [&>svg]:h-8">
         {icon}
       </div>
-
-      <h6 className="text-natural mb-3">{title}</h6>
-
-      <b2 className="text-gray-700">{detail}</b2>
+      
+      <h6 className="text-2xl text-natural mb-3">
+        {title}
+      </h6>
+      
+      <b2 className="text-neutral-800 font-normal">
+        {detail}
+      </b2>
     </div>
   )
 }
