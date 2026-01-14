@@ -6,7 +6,7 @@ const customButtonVariants = tv({
   base: 'text-white transition-all duration-300 hover:scale-105 active:scale-95',
   variants: {
     color: {
-      natural: 'bg-natural hover:bg-hover-natural border-1 border-[var(--hover-natural)]',
+      natural: 'bg-natural hover:bg-hover-natural',
       primary: 'bg-primary hover:bg-hover-primary',
       secondary: 'bg-secondary hover:bg-hover-secondary',
       accent: 'bg-accent hover:bg-hover-accent',
