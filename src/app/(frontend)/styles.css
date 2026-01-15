@@ -6,7 +6,7 @@
   color-scheme: light;
 
   /* Utility Variables (spt-* colors) */
-  --background: #ffffff;
+  --background: #F5F5F5;
   --surface: var(--spt-neutral-100);
   --border: var(--spt-neutral-200);
   --shadow: var(--spt-elevation-3);
@@ -21,7 +21,7 @@
   --spt-primary-200: #1fd4ff;
   --spt-primary-300: #00aad3;
   --spt-primary-400: #006e88;
-  --spt-primary-500: #006177;
+  --spt-primary-500: #003D51;
   --spt-primary-10: #006e88;
 
   --spt-secondary-100: #8ef3e2;

@@ -13,9 +13,6 @@ import {
   Globe,
   CheckCircle,
   Bot,
-  Sparkles,
-  TrendingUp,
-  Clock,
   Monitor,
 } from 'lucide-react'
 
@@ -28,24 +25,24 @@ export default function HomePage() {
       {/* Feature Card */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 p-10">
         <FeatureCard
-          icon={<Bot />}
-          title="AI Automation Mastery"
-          detail="Leveraging cutting-edge AI to streamline operations and unlock new efficiencies."
+          image="/Bot.png"
+          title="Intelligent Automation"
+          detail="Transform manual processes into 24/7 autonomous systems. We optimize workflows to free your team for high-value innovation."
         />
         <FeatureCard
-          icon={<Sparkles />}
-          title="Expert Full-Stack Team"
-          detail="End-to-end development capabilities, ensuring seamless integration across all platforms."
+          image="/Server.png"
+          title="Scalable Architecture"
+          detail="Secure, enterprise-grade solutions built on battle-tested stacks, designed to evolve seamlessly with your business."
         />
         <FeatureCard
-          icon={<TrendingUp />}
+          image="/TrendingUP.png"
           title="Rapid Delivery"
-          detail="Agile workflows optimized for speed, accelerating your time-to-market without compromising quality."
+          detail="	Accelerate time-to-market with our agile frameworks, ensuring speed without compromising security or quality."
         />
         <FeatureCard
-          icon={<Clock />}
-          title="Tailored Innovation"
-          detail="Custom solutions engineered specifically to solve your unique business challenges."
+          image="/Sparkles.png"
+          title="Strategic Partnership"
+          detail="More than a vendor. We provide the strategic ecosystem and foresight needed to lead your industry."
         />
       </div>
 
@@ -53,22 +50,22 @@ export default function HomePage() {
       <div className="flex justify-center items-center p-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl w-full">
           <ServiceCard
-            image="https://images.unsplash.com/photo-1531746790731-6c087fecd65a?q=80&w=2000&auto=format&fit=crop"
+            image="/images/AI & Workflow Automation.png"
             icon={<Bot />}
-            title="AI Automation"
-            detail="Streamline your operations with intelligent bots and workflow automation. We build custom AI solutions that reduce manual tasks and optimize business processes."
+            title="AI & Workflow Automation"
+            detail="Transform manual tasks into autonomous, 24/7 workflows. We orchestrate Make and n8n to connect your apps into one high-performance ecosystem."
           />
           <ServiceCard
-            image="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2000&auto=format&fit=crop"
+            image="/images/Software Development.png"
             icon={<Monitor />}
             title="Software Development"
-            detail="From web applications to complex enterprise systems, our full-stack team delivers robust, scalable, and high-performance software tailored to your needs."
+            detail="Build secure, scalable digital solutions tailored to your business. Our full-stack team engineers the robust technology backbone you need for long-term success."
           />
         </div>
       </div>
 
       {/* Horizon Cards */}
-      <div className="flex justify-center items-center p-10">
+      <div className="flex justify-center items-center p-10 bg-spt-neutral-1000">
         <div className="flex flex-col gap-5 w-full items-center">
           <HorizonCard
             image="/images/sprouting_academy_thum.png"
@@ -86,38 +83,39 @@ export default function HomePage() {
           />
         </div>
       </div>
-          {/* Badge */}
-          <div className="flex items-center gap-3 justify-center flex-wrap p-5">
-            <Badge icon={<CodeIcon />} text="React / Next.js" />
-            <Badge icon={<Database />} text="PostgreSQL" />
-            <Badge icon={<Cpu />} text="Python AI" />
-            <Badge icon={<Globe />} text="Cloud Native" />
-            <Badge icon={<CheckCircle />} text="Tailwind CSS" />
-            <Badge icon={<CodeIcon />} text="TypeScript" />
-          </div>
 
-          {/* Testimonial Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pr-10 pl-10 pb-10">
-            <TestimonialCard
-              avatar="NS"
-              title="Natthakit Saetan"
-              subtitle="General Manager"
-              detail="เนื้อหาออกแบบมาให้ใช้งานได้ง่าย สามารถนำไปใช้จริงได้ง่าย สามารถนำไปใช้จริงอย่างได้ Workflow อัตโนมัติได้จริง ๆ"
-            />
-            <TestimonialCard
-              avatar="NS"
-              title="Natthakit Saetan"
-              subtitle="General Manager"
-              detail="เนื้อหาออกแบบมาให้ใช้งานได้ง่าย สามารถนำไปใช้จริงได้ง่าย สามารถนำไปใช้จริงอย่างได้ Workflow อัตโนมัติได้จริง ๆ"
-            />
-            <TestimonialCard
-              avatar="NS"
-              title="Natthakit Saetan"
-              subtitle="General Manager"
-              detail="เนื้อหาออกแบบมาให้ใช้งานได้ง่าย สามารถนำไปใช้จริงได้ง่าย สามารถนำไปใช้จริงอย่างได้ Workflow อัตโนมัติได้จริง ๆ"
-            />
-          </div>
-          
+      {/* Badge */}
+      <div className="flex items-center gap-3 justify-center flex-wrap p-5">
+        <Badge icon={<CodeIcon />} text="React / Next.js" />
+        <Badge icon={<Database />} text="PostgreSQL" />
+        <Badge icon={<Cpu />} text="Python AI" />
+        <Badge icon={<Globe />} text="Cloud Native" />
+        <Badge icon={<CheckCircle />} text="Tailwind CSS" />
+        <Badge icon={<CodeIcon />} text="TypeScript" />
+      </div>
+
+      {/* Testimonial Cards */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pr-10 pl-10 pb-10">
+        <TestimonialCard
+          avatar="NS"
+          title="Natthakit Saetan"
+          subtitle="General Manager"
+          detail="เนื้อหาออกแบบมาให้ใช้งานได้ง่าย สามารถนำไปใช้จริงได้ง่าย สามารถนำไปใช้จริงอย่างได้ Workflow อัตโนมัติได้จริง ๆ"
+        />
+        <TestimonialCard
+          avatar="NS"
+          title="Natthakit Saetan"
+          subtitle="General Manager"
+          detail="เนื้อหาออกแบบมาให้ใช้งานได้ง่าย สามารถนำไปใช้จริงได้ง่าย สามารถนำไปใช้จริงอย่างได้ Workflow อัตโนมัติได้จริง ๆ"
+        />
+        <TestimonialCard
+          avatar="NS"
+          title="Natthakit Saetan"
+          subtitle="General Manager"
+          detail="เนื้อหาออกแบบมาให้ใช้งานได้ง่าย สามารถนำไปใช้จริงได้ง่าย สามารถนำไปใช้จริงอย่างได้ Workflow อัตโนมัติได้จริง ๆ"
+        />
+      </div>
+
     </div>
   )
 }

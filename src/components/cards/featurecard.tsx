@@ -2,29 +2,29 @@ import React from 'react'
 import { cn } from '../../util/cn'
 
 interface FeatureCardProps {
-  icon: React.ReactNode
+  image: string
   title: string
   detail: string
   className?: string
 }
 
-export const FeatureCard = ({ icon, title, detail, className }: FeatureCardProps) => {
+export const FeatureCard = ({ image, title, detail, className }: FeatureCardProps) => {
   return (
     <div
       className={cn(
-        'flex flex-col items-center text-center py-5 w-auto rounded-2xl shadow-md',
+        'flex flex-col items-center text-center py-5 px-6 w-auto rounded-2xl shadow-md',
         className,
       )}
     >
-      <div className="bg-[#E0F2F1] text-primary p-4 rounded-xl mb-3 [&>svg]:w-8 [&>svg]:h-8">
-        {icon}
+      <div className="bg-spt-secondary-400/12 p-4 rounded-xl mb-3 [&>svg]:w-8 [&>svg]:h-8">
+        <img src={image} className="w-8 h-8 object-contain"/>
       </div>
       
-      <h6 className="text-2xl text-hover-natural mb-3">
+      <h6 className="text-2xl text-spt-primary-500 mb-3">
         {title}
       </h6>
       
-      <b2 className="text-[#5E5E5E] font-normal">
+      <b2 className="text-spt-neutral-800 font-normal">
         {detail}
       </b2>
     </div>
