@@ -22,21 +22,21 @@ export const ServiceCard = ({ image, icon, title, detail, className } : ServiceC
           alt={title} 
           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
         />
-        <div className="absolute bottom-4 left-4 z-10 bg-white p-3 rounded-xl text-natural opacity-90 [&>svg]:w-6 [&>svg]:h-6">
+        <div className="absolute bottom-4 left-4 z-10 bg-white p-3 rounded-xl text-spt-primary-400 opacity-90 [&>svg]:w-6 [&>svg]:h-6">
           {icon}
         </div>
       </div>
 
       <div className="py-6 px-8 flex flex-col grow">
-        <h6 className="text-2xl text-hover-natural">
+        <h6 className="text-2xl text-spt-primary-500">
           {title}
         </h6>
         
-        <b2 className="text-[#5E5E5E] leading-relaxed mt-2 mb-6 line-clamp-3">
+        <b2 className="text-spt-neutral-800 leading-relaxed mt-2 mb-6 line-clamp-3">
           {detail}
         </b2>
 
-        <div className="mt-auto flex items-center gap-2 text-primary font-prompt font-semibold text-base cursor-pointer hover:opacity-80 transition-opacity">
+        <div className="mt-auto flex items-center gap-2 text-spt-secondary-400 font-prompt font-semibold text-base cursor-pointer hover:opacity-80 transition-opacity">
           <span>Learn More</span>
           <ArrowRight className="w-4 h-4" />
         </div>

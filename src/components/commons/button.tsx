@@ -6,10 +6,8 @@ const customButtonVariants = tv({
   base: 'font-prompt font-semibold transition-all duration-300 hover:scale-105 active:scale-95',
   variants: {
     color: {
-      natural: 'bg-natural hover:bg-hover-natural',
-      primary: 'bg-primary hover:bg-hover-primary',
-      secondary: 'bg-secondary hover:bg-hover-secondary',
-      accent: 'bg-accent hover:bg-hover-accent',
+      primary: 'bg-spt-primary-400 hover:bg-spt-primary-500',
+      secondary: 'bg-spt-secondary-400 hover:bg-spt-secondary-500',
     },
     size: {
       sm: 'min-w-14 w-auto h-6 text-xs',
@@ -23,7 +21,7 @@ const customButtonVariants = tv({
     },
   },
   defaultVariants: {
-    color: 'natural',
+    color: 'primary',
     size: 'md',
     variant: 'pill',
   },

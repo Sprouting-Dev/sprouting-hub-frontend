@@ -3,7 +3,7 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import logoImg from '../../public/Logo.png'
+import logoImg from '/public/Logo.png'
 import { usePathname } from 'next/navigation'
 import { Button } from '@/components/commons/button'
 import { Globe } from 'lucide-react'
@@ -21,18 +21,18 @@ export const Navbar = () => {
   ]
 
   return (
-    <nav className="sticky top-0 z-50 w-full bg-[#ffffff] px-8 py-4 shadow-sm">
+    <nav className="sticky top-0 z-50 w-full bg-white px-8 py-4 shadow-sm">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <Link href="/" className="flex items-center gap-1 group">
-           <Image 
-             src={logoImg}
-             alt="Sprouting Tech Logo"
-             className="w-19.25 h-8 object-contain"
-             priority
-           />
-           <span className="font-bold text-2xl font-prompt bg-gradient-to-t from-primary to-natural bg-clip-text text-transparent px-1 whitespace-nowrap">
-             Sprouting Tech
-           </span>
+          <Image
+            src={logoImg}
+            alt="Sprouting Tech Logo"
+            className="w-19.25 h-8 object-contain"
+            priority
+          />
+          <span className="font-bold text-2xl font-prompt bg-gradient-to-b from-spt-primary-400 to-spt-secondary-400 bg-clip-text text-transparent px-1 whitespace-nowrap">
+            Sprouting Tech
+          </span>
         </Link>
 
         <div className="hidden md:flex items-center space-x-8 ml-auto mr-8">
@@ -44,8 +44,8 @@ export const Navbar = () => {
                 key={item.name}
                 href={item.path}
                 className={cn(
-                  "text-base font-normal font-prompt transition-colors hover:text-natural",
-                  isActive ? "text-natural" : "text-[#9F9F9F]"
+                  'text-base font-normal font-prompt transition-colors hover:text-spt-primary-400',
+                  isActive ? 'text-spt-primary-400' : 'text-spt-neutral-500',
                 )}
               >
                 {item.name}
@@ -54,35 +54,39 @@ export const Navbar = () => {
           })}
         </div>
 
-        <div className="hidden md:block w-[2px] h-6 bg-[#DFDFDF] mr-8"></div>
+        <div className="hidden md:block w-[0.5px] h-6 bg-spt-neutral-200 mr-8"></div>
 
         <div className="flex items-center gap-6">
           <div className="flex items-center gap-2 text-sm font-semibold leading-5 font-prompt select-none">
-            <Globe className="w-4 h-4 text-primary" />
+            <Globe className="w-4 h-4 text-spt-secondary-400" />
             <span
               onClick={() => setCurrentLang('EN')}
               className={cn(
-                "cursor-pointer transition-colors",
-                currentLang === 'EN' ? "text-natural" : "text-neutral-500 hover:text-natural"
+                'cursor-pointer transition-colors',
+                currentLang === 'EN'
+                  ? 'text-spt-primary-400'
+                  : 'text-spt-neutral-500 hover:text-spt-primary-400',
               )}
             >
               EN
             </span>
 
-            <span className="w-[2px] h-6 bg-[#DFDFDF] mx-1"></span>
+            <span className="w-[0.5px] h-6 bg-spt-neutral-200 mx-1"></span>
 
             <span
               onClick={() => setCurrentLang('TH')}
               className={cn(
-                "cursor-pointer transition-colors",
-                currentLang === 'TH' ? "text-natural" : "text-[#9F9F9F] hover:text-natural"
+                'cursor-pointer transition-colors',
+                currentLang === 'TH'
+                  ? 'text-spt-primary-400'
+                  : 'text-spt-neutral-500 hover:text-spt-primary-400',
               )}
             >
               TH
             </span>
           </div>
 
-          <Button className="h-10" label="Get Started" color="natural" size="md" variant="pill" />
+          <Button className="h-10" label="Get Started" color="primary" size="md" variant="pill" />
         </div>
       </div>
     </nav>
