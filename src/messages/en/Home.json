@@ -1,0 +1,69 @@
+{
+  "features": {
+    "automation": {
+      "title": "Intelligent Automation",
+      "detail": "Transform manual processes into 24/7 autonomous systems. We optimize workflows to free your team for high-value innovation."
+    },
+    "architecture": {
+      "title": "Scalable Architecture",
+      "detail": "Secure, enterprise-grade solutions built on battle-tested stacks, designed to evolve seamlessly with your business."
+    },
+    "delivery": {
+      "title": "Rapid Delivery",
+      "detail": "Accelerate time-to-market with our agile frameworks, ensuring speed without compromising security or quality."
+    },
+    "partnership": {
+      "title": "Strategic Partnership",
+      "detail": "More than a vendor. We provide the strategic ecosystem and foresight needed to lead your industry."
+    }
+  },
+  "services": {
+    "automation": {
+      "title": "AI & Workflow Automation",
+      "detail": "Transform manual tasks into autonomous, 24/7 workflows. We orchestrate Make and n8n to connect your apps into one high-performance ecosystem."
+    },
+    "software": {
+      "title": "Software Development",
+      "detail": "Build secure, scalable digital solutions tailored to your business. Our full-stack team engineers the robust technology backbone you need for long-term success."
+    }
+  },
+  "horizon": {
+    "academy": {
+      "title": "Sprouting Tech Academy",
+      "detail": "Sprouting Tech Academy is a specialized professional learning institution dedicated to advancing expertise in AI and Workflow Automation. Our curriculum is designed around industry-leading platforms, including Make.com and n8n, equipping learners with the technical proficiency and strategic mindset required to lead in an increasingly automated digital economy.",
+      "tag": "Education",
+      "buttonTitle": "Visit Academy"
+    },
+    "wiivor": {
+      "title": "Wiivor",
+      "detail": "Wiivor is an intelligent, AI-driven web development ecosystem designed to bridge the gap between concept and execution. By articulating your requirements in natural language, our advanced generative AI engine accurately interprets your vision and delivers fully functional, production-ready websites—removing the traditional complexities of coding, design, and infrastructure management.",
+      "tag": "AI Generative Platform",
+      "buttonTitle": "Explore Wiivor"
+    }
+  },
+  "badges": {
+    "reactNext": "React / Next.js",
+    "postgres": "PostgreSQL",
+    "pythonAi": "Python AI",
+    "cloudNative": "Cloud Native",
+    "tailwind": "Tailwind CSS",
+    "typescript": "TypeScript"
+  },
+  "testimonials": {
+    "first": {
+      "title": "Natthakit Saetan",
+      "subtitle": "General Manager",
+      "detail": "เนื้อหาออกแบบมาให้ใช้งานได้ง่าย สามารถนำไปใช้จริงได้ง่าย สามารถนำไปใช้จริงอย่างได้ Workflow อัตโนมัติได้จริง ๆ"
+    },
+    "second": {
+      "title": "Natthakit Saetan",
+      "subtitle": "General Manager",
+      "detail": "เนื้อหาออกแบบมาให้ใช้งานได้ง่าย สามารถนำไปใช้จริงได้ง่าย สามารถนำไปใช้จริงอย่างได้ Workflow อัตโนมัติได้จริง ๆ"
+    },
+    "third": {
+      "title": "Natthakit Saetan",
+      "subtitle": "General Manager",
+      "detail": "เนื้อหาออกแบบมาให้ใช้งานได้ง่าย สามารถนำไปใช้จริงได้ง่าย สามารถนำไปใช้จริงอย่างได้ Workflow อัตโนมัติได้จริง ๆ"
+    }
+  }
+}
