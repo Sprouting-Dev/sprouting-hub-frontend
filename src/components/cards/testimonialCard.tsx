@@ -12,14 +12,14 @@ const TestimonialCard = ({ avatar, title, subtitle, detail, className }: Testimo
   return (
     <div
       className={cn(
-        'w-96 h-[266px] rounded-[14px] p-4 flex flex-col gap-4 border border-gray-200 sprout-shadow-md',
+        'w-96 h-[266px] rounded-[14px] p-4 flex flex-col gap-4 bg-spt-neutral-100 sprout-shadow-md',
         className,
       )}
     >
       {/* Header */}
       <div className="flex items-center gap-3">
         {/* Avatar */}
-        <div className="w-12 h-12 rounded-full bg-spt-primary-400 border-[2px] border-[#13B499] flex items-center justify-center text-[#333333] font-bold text-lg font-prompt">
+        <div className="w-12 h-12 rounded-full bg-spt-primary-400 border-[2px] border-spt-secondary-400 flex items-center justify-center text-spt-neutral-1000 font-bold text-lg font-prompt">
           {avatar}
         </div>
         <div className="flex flex-col">
