@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
-import logoImg from '/public/Logo.png'
+import logoImg from '/public/brand/Logo.png'
 import { usePathname, useRouter } from 'next/navigation'
 import { useLocale, useTranslations } from 'next-intl'
 import { Button } from '@/components/commons/button'
@@ -41,7 +41,7 @@ export const Navbar = () => {
             className="w-19.25 h-8 object-contain"
             priority
           />
-          <span className="font-bold text-2xl font-prompt bg-linear-to-b from-spt-primary-400 to-spt-secondary-400 bg-clip-text text-transparent px-1 whitespace-nowrap">
+          <span className="font-bold text-2xl bg-linear-to-b from-spt-primary-400 to-spt-secondary-400 bg-clip-text text-transparent px-1 whitespace-nowrap">
             Sprouting Tech
           </span>
         </Link>
@@ -55,7 +55,7 @@ export const Navbar = () => {
                 key={item.name}
                 href={item.path}
                 className={cn(
-                  'text-base font-normal font-prompt transition-colors hover:text-spt-primary-400',
+                  'text-base font-normal transition-colors hover:text-spt-primary-400',
                   isActive ? 'text-spt-primary-400' : 'text-spt-neutral-500',
                 )}
               >
@@ -68,7 +68,7 @@ export const Navbar = () => {
         <div className="hidden md:block w-[0.5px] h-6 bg-spt-neutral-200 mr-8"></div>
 
         <div className="flex items-center gap-6">
-          <div className="flex items-center gap-2 text-sm font-semibold leading-5 font-prompt select-none">
+          <div className="flex items-center gap-2 text-sm font-semibold leading-5 select-none">
             <Globe className="w-4 h-4 text-spt-secondary-400" />
             <span
               onClick={() => setLocaleCookie('en')}

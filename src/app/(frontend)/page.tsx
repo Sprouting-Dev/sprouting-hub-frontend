@@ -3,19 +3,8 @@
 import React from 'react'
 import { useTranslations } from 'next-intl'
 import { Badge } from '@/components/commons/badge'
-import { FeatureCard } from '@/components/cards/featurecard'
-import { ServiceCard } from '@/components/cards/servicecard'
-import { TestimonialCard } from '@/components/cards/testimonialCard'
-import { HorizonCard } from '@/components/cards/horizonCard'
-import {
-  CodeIcon,
-  Database,
-  Cpu,
-  Globe,
-  CheckCircle,
-  Bot,
-  Monitor,
-} from 'lucide-react'
+import { FeatureCard, ServiceCard, TestimonialCard, HorizonCard } from '@/components/cards'
+import { CodeIcon, Database, Cpu, Globe, CheckCircle, Bot, Monitor } from 'lucide-react'
 
 import './styles.css'
 
@@ -27,22 +16,22 @@ export default function HomePage() {
       {/* Feature Card */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 p-10">
         <FeatureCard
-          image="/Bot.png"
+          image="/icons/Bot.png"
           title={t('features.automation.title')}
           detail={t('features.automation.detail')}
         />
         <FeatureCard
-          image="/Server.png"
+          image="/icons/Server.png"
           title={t('features.architecture.title')}
           detail={t('features.architecture.detail')}
         />
         <FeatureCard
-          image="/TrendingUP.png"
+          image="/icons/TrendingUp.png"
           title={t('features.delivery.title')}
           detail={t('features.delivery.detail')}
         />
         <FeatureCard
-          image="/Sparkles.png"
+          image="/icons/Sparkles.png"
           title={t('features.partnership.title')}
           detail={t('features.partnership.detail')}
         />
@@ -75,7 +64,7 @@ export default function HomePage() {
             detail={t('horizon.academy.detail')}
             tag={t('horizon.academy.tag')}
             buttonTitle={t('horizon.academy.buttonTitle')}
-            onClick={() => window.location.href = '/#'}
+            onClick={() => (window.location.href = '/#')}
           />
           <HorizonCard
             image="/images/wiivor_mockup_banner.png"
@@ -83,7 +72,7 @@ export default function HomePage() {
             detail={t('horizon.wiivor.detail')}
             tag={t('horizon.wiivor.tag')}
             buttonTitle={t('horizon.wiivor.buttonTitle')}
-            onClick={() => window.location.href = '/#'}
+            onClick={() => (window.location.href = '/#')}
           />
         </div>
       </div>
@@ -99,26 +88,26 @@ export default function HomePage() {
       </div>
 
       {/* Testimonial Cards */}
-       <div className="flex justify-center items-center p-10">
+      <div className="flex justify-center items-center p-10">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-7xl justify-items-center">
-        <TestimonialCard
-          avatar="NS"
-          title={t('testimonials.first.title')}
-          subtitle={t('testimonials.first.subtitle')}
-          detail={t('testimonials.first.detail')}
-        />
-        <TestimonialCard
-          avatar="NS"
-          title={t('testimonials.second.title')}
-          subtitle={t('testimonials.second.subtitle')}
-          detail={t('testimonials.second.detail')}
-        />
-        <TestimonialCard
-          avatar="NS"
-          title={t('testimonials.third.title')}
-          subtitle={t('testimonials.third.subtitle')}
-          detail={t('testimonials.third.detail')}
-        />
+          <TestimonialCard
+            avatar="NS"
+            title={t('testimonials.first.title')}
+            subtitle={t('testimonials.first.subtitle')}
+            detail={t('testimonials.first.detail')}
+          />
+          <TestimonialCard
+            avatar="NS"
+            title={t('testimonials.second.title')}
+            subtitle={t('testimonials.second.subtitle')}
+            detail={t('testimonials.second.detail')}
+          />
+          <TestimonialCard
+            avatar="NS"
+            title={t('testimonials.third.title')}
+            subtitle={t('testimonials.third.subtitle')}
+            detail={t('testimonials.third.detail')}
+          />
         </div>
       </div>
     </div>
