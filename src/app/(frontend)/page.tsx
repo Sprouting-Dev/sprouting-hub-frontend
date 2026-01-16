@@ -1,6 +1,7 @@
 'use client'
 
 import React from 'react'
+import { useTranslations } from 'next-intl'
 import { Badge } from '@/components/commons/badge'
 import { FeatureCard } from '@/components/cards/featurecard'
 import { ServiceCard } from '@/components/cards/servicecard'
@@ -19,30 +20,31 @@ import {
 import './styles.css'
 
 export default function HomePage() {
+  const t = useTranslations('Home')
+
   return (
     <div className="flex flex-col gap-5">
-
       {/* Feature Card */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 p-10">
         <FeatureCard
           image="/Bot.png"
-          title="Intelligent Automation"
-          detail="Transform manual processes into 24/7 autonomous systems. We optimize workflows to free your team for high-value innovation."
+          title={t('features.automation.title')}
+          detail={t('features.automation.detail')}
         />
         <FeatureCard
           image="/Server.png"
-          title="Scalable Architecture"
-          detail="Secure, enterprise-grade solutions built on battle-tested stacks, designed to evolve seamlessly with your business."
+          title={t('features.architecture.title')}
+          detail={t('features.architecture.detail')}
         />
         <FeatureCard
           image="/TrendingUP.png"
-          title="Rapid Delivery"
-          detail="	Accelerate time-to-market with our agile frameworks, ensuring speed without compromising security or quality."
+          title={t('features.delivery.title')}
+          detail={t('features.delivery.detail')}
         />
         <FeatureCard
           image="/Sparkles.png"
-          title="Strategic Partnership"
-          detail="More than a vendor. We provide the strategic ecosystem and foresight needed to lead your industry."
+          title={t('features.partnership.title')}
+          detail={t('features.partnership.detail')}
         />
       </div>
 
@@ -52,14 +54,14 @@ export default function HomePage() {
           <ServiceCard
             image="/images/AI & Workflow Automation.png"
             icon={<Bot />}
-            title="AI & Workflow Automation"
-            detail="Transform manual tasks into autonomous, 24/7 workflows. We orchestrate Make and n8n to connect your apps into one high-performance ecosystem."
+            title={t('services.automation.title')}
+            detail={t('services.automation.detail')}
           />
           <ServiceCard
             image="/images/Software Development.png"
             icon={<Monitor />}
-            title="Software Development"
-            detail="Build secure, scalable digital solutions tailored to your business. Our full-stack team engineers the robust technology backbone you need for long-term success."
+            title={t('services.software.title')}
+            detail={t('services.software.detail')}
           />
         </div>
       </div>
@@ -69,53 +71,52 @@ export default function HomePage() {
         <div className="flex flex-col gap-5 w-full items-center">
           <HorizonCard
             image="/images/sprouting_academy_thum.png"
-            title="Sprouting Tech Academy"
-            detail="Sprouting Tech Academy is a specialized professional learning institution dedicated to advancing expertise in AI and Workflow Automation. Our curriculum is designed around industry-leading platforms, including Make.com and n8n, equipping learners with the technical proficiency and strategic mindset required to lead in an increasingly automated digital economy."
-            tag="Education"
-            buttonTitle="Visit Academy"
+            title={t('horizon.academy.title')}
+            detail={t('horizon.academy.detail')}
+            tag={t('horizon.academy.tag')}
+            buttonTitle={t('horizon.academy.buttonTitle')}
           />
           <HorizonCard
             image="/images/wiivor_mockup_banner.png"
-            title="Wiivor"
-            detail="Wiivor is an intelligent, AI-driven web development ecosystem designed to bridge the gap between concept and execution. By articulating your requirements in natural language, our advanced generative AI engine accurately interprets your vision and delivers fully functional, production-ready websites—removing the traditional complexities of coding, design, and infrastructure management."
-            tag="AI Generative Platform"
-            buttonTitle="Explore Wiivor"
+            title={t('horizon.wiivor.title')}
+            detail={t('horizon.wiivor.detail')}
+            tag={t('horizon.wiivor.tag')}
+            buttonTitle={t('horizon.wiivor.buttonTitle')}
           />
         </div>
       </div>
 
       {/* Badge */}
       <div className="flex items-center gap-3 justify-center flex-wrap p-5">
-        <Badge icon={<CodeIcon />} text="React / Next.js" />
-        <Badge icon={<Database />} text="PostgreSQL" />
-        <Badge icon={<Cpu />} text="Python AI" />
-        <Badge icon={<Globe />} text="Cloud Native" />
-        <Badge icon={<CheckCircle />} text="Tailwind CSS" />
-        <Badge icon={<CodeIcon />} text="TypeScript" />
+        <Badge icon={<CodeIcon />} text={t('badges.reactNext')} />
+        <Badge icon={<Database />} text={t('badges.postgres')} />
+        <Badge icon={<Cpu />} text={t('badges.pythonAi')} />
+        <Badge icon={<Globe />} text={t('badges.cloudNative')} />
+        <Badge icon={<CheckCircle />} text={t('badges.tailwind')} />
+        <Badge icon={<CodeIcon />} text={t('badges.typescript')} />
       </div>
 
       {/* Testimonial Cards */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pr-10 pl-10 pb-10">
         <TestimonialCard
           avatar="NS"
-          title="Natthakit Saetan"
-          subtitle="General Manager"
-          detail="เนื้อหาออกแบบมาให้ใช้งานได้ง่าย สามารถนำไปใช้จริงได้ง่าย สามารถนำไปใช้จริงอย่างได้ Workflow อัตโนมัติได้จริง ๆ"
+          title={t('testimonials.first.title')}
+          subtitle={t('testimonials.first.subtitle')}
+          detail={t('testimonials.first.detail')}
         />
         <TestimonialCard
           avatar="NS"
-          title="Natthakit Saetan"
-          subtitle="General Manager"
-          detail="เนื้อหาออกแบบมาให้ใช้งานได้ง่าย สามารถนำไปใช้จริงได้ง่าย สามารถนำไปใช้จริงอย่างได้ Workflow อัตโนมัติได้จริง ๆ"
+          title={t('testimonials.second.title')}
+          subtitle={t('testimonials.second.subtitle')}
+          detail={t('testimonials.second.detail')}
         />
         <TestimonialCard
           avatar="NS"
-          title="Natthakit Saetan"
-          subtitle="General Manager"
-          detail="เนื้อหาออกแบบมาให้ใช้งานได้ง่าย สามารถนำไปใช้จริงได้ง่าย สามารถนำไปใช้จริงอย่างได้ Workflow อัตโนมัติได้จริง ๆ"
+          title={t('testimonials.third.title')}
+          subtitle={t('testimonials.third.subtitle')}
+          detail={t('testimonials.third.detail')}
         />
       </div>
-
     </div>
   )
 }

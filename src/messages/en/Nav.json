@@ -1,0 +1,11 @@
+{
+  "home": "Home",
+  "services": "Services",
+  "about": "About",
+  "contact": "Contact",
+  "getStarted": "Get Started",
+  "language": {
+    "en": "EN",
+    "th": "TH"
+  }
+}

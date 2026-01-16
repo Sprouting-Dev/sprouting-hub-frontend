@@ -1,23 +1,34 @@
 'use client'
 
-import React, { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import logoImg from '/public/Logo.png'
-import { usePathname } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
+import { useLocale, useTranslations } from 'next-intl'
 import { Button } from '@/components/commons/button'
 import { Globe } from 'lucide-react'
 import { cn } from '../../util/cn'
 
 export const Navbar = () => {
   const pathname = usePathname()
-  const [currentLang, setCurrentLang] = useState<'EN' | 'TH'>('EN')
+  const router = useRouter()
+  const locale = useLocale()
+  const t = useTranslations('Nav')
+
+  const setLocaleCookie = (nextLocale: 'en' | 'th') => {
+    if (nextLocale === locale) {
+      return
+    }
+
+    document.cookie = `NEXT_LOCALE=${nextLocale}; path=/; max-age=31536000; samesite=lax`
+    router.refresh()
+  }
 
   const navItems = [
-    { name: 'Home', path: '/' },
-    { name: 'Services', path: '/services' },
-    { name: 'About', path: '/about' },
-    { name: 'Contact', path: '/contact' },
+    { name: t('home'), path: '/' },
+    { name: t('services'), path: '/services' },
+    { name: t('about'), path: '/about' },
+    { name: t('contact'), path: '/contact' },
   ]
 
   return (
@@ -30,7 +41,7 @@ export const Navbar = () => {
             className="w-19.25 h-8 object-contain"
             priority
           />
-          <span className="font-bold text-2xl font-prompt bg-gradient-to-b from-spt-primary-400 to-spt-secondary-400 bg-clip-text text-transparent px-1 whitespace-nowrap">
+          <span className="font-bold text-2xl font-prompt bg-linear-to-b from-spt-primary-400 to-spt-secondary-400 bg-clip-text text-transparent px-1 whitespace-nowrap">
             Sprouting Tech
           </span>
         </Link>
@@ -60,33 +71,39 @@ export const Navbar = () => {
           <div className="flex items-center gap-2 text-sm font-semibold leading-5 font-prompt select-none">
             <Globe className="w-4 h-4 text-spt-secondary-400" />
             <span
-              onClick={() => setCurrentLang('EN')}
+              onClick={() => setLocaleCookie('en')}
               className={cn(
                 'cursor-pointer transition-colors',
-                currentLang === 'EN'
+                locale === 'en'
                   ? 'text-spt-primary-400'
                   : 'text-spt-neutral-500 hover:text-spt-primary-400',
               )}
             >
-              EN
+              {t('language.en')}
             </span>
 
             <span className="w-[0.5px] h-6 bg-spt-neutral-200 mx-1"></span>
 
             <span
-              onClick={() => setCurrentLang('TH')}
+              onClick={() => setLocaleCookie('th')}
               className={cn(
                 'cursor-pointer transition-colors',
-                currentLang === 'TH'
+                locale === 'th'
                   ? 'text-spt-primary-400'
                   : 'text-spt-neutral-500 hover:text-spt-primary-400',
               )}
             >
-              TH
+              {t('language.th')}
             </span>
           </div>
 
-          <Button className="h-10" label="Get Started" color="primary" size="md" variant="pill" />
+          <Button
+            className="h-10"
+            label={t('getStarted')}
+            color="primary"
+            size="md"
+            variant="pill"
+          />
         </div>
       </div>
     </nav>
