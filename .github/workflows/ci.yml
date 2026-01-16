@@ -21,7 +21,9 @@ jobs:
           cache: 'pnpm'
 
       - name: Enable corepack
-        run: corepack enable
+        run: |
+          corepack enable
+          corepack prepare pnpm@10 --activate
 
       - name: Install deps
         run: pnpm install --frozen-lockfile
