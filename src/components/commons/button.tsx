@@ -3,7 +3,7 @@ import { tv, type VariantProps } from 'tailwind-variants'
 
 const customButtonVariants = tv({
   extend: buttonVariants,
-  base: 'font-prompt font-semibold transition-all duration-300 hover:scale-105 active:scale-95',
+  base: 'font-semibold transition-all duration-300 hover:scale-105 active:scale-95',
   variants: {
     color: {
       primary: 'bg-spt-primary-400 hover:bg-spt-primary-500',

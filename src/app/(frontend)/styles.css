@@ -1,12 +1,11 @@
 @import 'tailwindcss';
 @import '@heroui/styles';
-@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@400;700&display=swap');
 
 :root {
   color-scheme: light;
 
   /* Utility Variables (spt-* colors) */
-  --background: #F5F5F5;
+  --background: #f5f5f5;
   --surface: var(--spt-neutral-100);
   --border: var(--spt-neutral-200);
   --shadow: var(--spt-elevation-3);
@@ -15,13 +14,14 @@
   --glow-amber: rgba(255, 107, 0, 0.15);
   --primary: var(--spt-primary-300);
   --secondary: var(--spt-secondary-300);
+  --font-prompt: 'Prompt', sans-serif;
 
   /* - Colors */
   --spt-primary-100: #69e2ff;
   --spt-primary-200: #1fd4ff;
   --spt-primary-300: #00aad3;
   --spt-primary-400: #006e88;
-  --spt-primary-500: #003D51;
+  --spt-primary-500: #003d51;
   --spt-primary-10: #006e88;
 
   --spt-secondary-100: #8ef3e2;
@@ -32,7 +32,7 @@
   --spt-secondary-10: #13b499;
 
   --spt-neutral-100: #f5f5f5;
-  --spt-neutral-150: #D1D5DC;
+  --spt-neutral-150: #d1d5dc;
   --spt-neutral-200: #dfdfdf;
   --spt-neutral-300: #cacaca;
   --spt-neutral-400: #b4b4b4;
@@ -160,19 +160,10 @@
   --color-spt-green-100: var(--spt-green-100);
   --color-spt-green-200: var(--spt-green-200);
   --color-spt-green-10: var(--spt-green-10);
-
-  /* Font Family */
-  --font-prompt: 'Prompt', sans-serif;
 }
 
 body {
-  font-family:
-    'Inter',
-    var(--font-sans),
-    system-ui,
-    -apple-system,
-    'Segoe UI',
-    sans-serif;
+  font-family: var(--font-prompt), sans-serif;
   background: var(--background);
   color: oklch(0.22 0.02 140);
 }
@@ -307,39 +298,39 @@ body {
 
 @layer base {
   h1 {
-    @apply font-prompt font-bold text-[3.5rem] leading-21;
+    @apply font-bold text-[3.5rem] leading-21;
   }
   h2 {
-    @apply font-prompt font-bold text-[2.875rem] leading-17.25;
+    @apply font-bold text-[2.875rem] leading-17.25;
   }
   h3 {
-    @apply font-prompt font-bold text-[2.375rem] leading-14.25;
+    @apply font-bold text-[2.375rem] leading-14.25;
   }
   h4 {
-    @apply font-prompt font-bold text-[2rem] leading-12;
+    @apply font-bold text-[2rem] leading-12;
   }
   h5 {
-    @apply font-prompt font-bold text-[1.625rem] leading-9.75;
+    @apply font-bold text-[1.625rem] leading-9.75;
   }
   h6 {
-    @apply font-prompt font-bold text-[1.375rem] leading-8.25;
+    @apply font-bold text-[1.375rem] leading-8.25;
   }
   b1 {
-    @apply font-prompt font-medium text-[1.125rem] leading-6.75;
+    @apply font-medium text-[1.125rem] leading-6.75;
   }
   b2 {
-    @apply font-prompt font-normal text-[1rem] leading-6;
+    @apply font-normal text-[1rem] leading-6;
   }
   b3 {
-    @apply font-prompt font-normal text-[0.875rem] leading-5.25;
+    @apply font-normal text-[0.875rem] leading-5.25;
   }
   b4 {
-    @apply font-prompt font-normal text-[0.75rem] leading-4.5;
+    @apply font-normal text-[0.75rem] leading-4.5;
   }
   b5 {
-    @apply font-prompt font-normal text-[0.625rem] leading-3.75;
+    @apply font-normal text-[0.625rem] leading-3.75;
   }
   b6 {
-    @apply font-prompt font-normal text-[0.5rem] leading-3;
+    @apply font-normal text-[0.5rem] leading-3;
   }
 }

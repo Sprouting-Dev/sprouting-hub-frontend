@@ -39,7 +39,7 @@ export const ServiceCard = ({ image, icon, title, detail, className } : ServiceC
           {detail}
         </b2>
 
-        <div className="mt-auto flex items-center gap-2 text-spt-secondary-400 font-prompt font-semibold text-base cursor-pointer hover:opacity-80 transition-opacity">
+        <div className="mt-auto flex items-center gap-2 text-spt-secondary-400 font-semibold text-base cursor-pointer hover:opacity-80 transition-opacity">
           <span>Learn More</span>
           <ArrowRight className="w-4 h-4" />
         </div>
