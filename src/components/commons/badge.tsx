@@ -1,13 +1,13 @@
-import React from 'react';
-import { cn } from '../../util/cn';
+import React from 'react'
+import { cn } from '../../util/cn'
 
 interface BadgeProps {
-  icon: React.ReactNode;
-  text: string;
-  className?: string;
+  icon: React.ReactNode
+  text: string
+  className?: string
 }
 
-export const Badge = ({ icon, text, className } : BadgeProps) => {
+export const Badge = ({ icon, text, className }: BadgeProps) => {
   return (
     <div
       className={cn(
@@ -18,8 +18,8 @@ export const Badge = ({ icon, text, className } : BadgeProps) => {
       <span className="text-spt-primary-400 flex items-center justify-center [&>svg]:w-5 [&>svg]:h-5">
         {icon}
       </span>
-      
+
       <span>{text}</span>
     </div>
-  );
-};
+  )
+}

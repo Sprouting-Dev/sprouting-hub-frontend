@@ -1,8 +1,8 @@
 #!/usr/bin/env sh
 set -e
 
-npm run format
-npm run lint:fix
+pnpm run format
+pnpm run lint:fix
 
 # Stop the commit if formatting/linting changed files so the updated files can be staged.
 if ! git diff --quiet; then
@@ -10,4 +10,4 @@ if ! git diff --quiet; then
   exit 1
 fi
 
-npm run build
+pnpm run build
