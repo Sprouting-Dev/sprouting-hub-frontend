@@ -32,6 +32,7 @@
   --spt-secondary-10: #13b499;
 
   --spt-neutral-100: #f5f5f5;
+  --spt-neutral-150: #D1D5DC;
   --spt-neutral-200: #dfdfdf;
   --spt-neutral-300: #cacaca;
   --spt-neutral-400: #b4b4b4;
@@ -39,6 +40,7 @@
   --spt-neutral-600: #898989;
   --spt-neutral-700: #747474;
   --spt-neutral-800: #5e5e5e;
+  --spt-neutral-850: #555555;
   --spt-neutral-900: #494949;
   --spt-neutral-1000: #333333;
   --spt-neutral-10: #333333;
@@ -126,6 +128,7 @@
 
   /* Neutral Colors */
   --color-spt-neutral-100: var(--spt-neutral-100);
+  --color-spt-neutral-150: var(--spt-neutral-150);
   --color-spt-neutral-200: var(--spt-neutral-200);
   --color-spt-neutral-300: var(--spt-neutral-300);
   --color-spt-neutral-400: var(--spt-neutral-400);
@@ -133,6 +136,7 @@
   --color-spt-neutral-600: var(--spt-neutral-600);
   --color-spt-neutral-700: var(--spt-neutral-700);
   --color-spt-neutral-800: var(--spt-neutral-800);
+  --color-spt-neutral-850: var(--spt-neutral-850);
   --color-spt-neutral-900: var(--spt-neutral-900);
   --color-spt-neutral-1000: var(--spt-neutral-1000);
   --color-spt-neutral-10: var(--spt-neutral-10);
@@ -276,11 +280,9 @@ body {
   max-width: 1216px;
   min-height: 326px;
   border-radius: 28px;
-  border: 1px solid color-mix(in oklch, var(--border), white 16%);
-  background: color-mix(in oklch, var(--surface), white 8%);
-  box-shadow:
-    0 1px 0 rgba(255, 255, 255, 0.6) inset,
-    var(--shadow);
+  border: 1px solid var(--spt-neutral-850);
+  background: var(--spt-neutral-900);
+  box-shadow: var(--shadow);
 }
 
 .sprout-shadow-sm {
