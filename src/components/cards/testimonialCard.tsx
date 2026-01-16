@@ -19,12 +19,12 @@ const TestimonialCard = ({ avatar, title, subtitle, detail, className }: Testimo
       {/* Header */}
       <div className="flex items-center gap-3">
         {/* Avatar */}
-        <div className="w-12 h-12 rounded-full bg-natural border-[2px] border-[#13B499] flex items-center justify-center text-[#333333] font-bold text-lg font-prompt">
+        <div className="w-12 h-12 rounded-full bg-spt-primary-400 border-[2px] border-[#13B499] flex items-center justify-center text-[#333333] font-bold text-lg font-prompt">
           {avatar}
         </div>
         <div className="flex flex-col">
-          <h6 className="text-[#333333] font-bold text-base font-prompt">{title}</h6>
-          <span className="text-[#9F9F9F] text-sm font-prompt font-normal">{subtitle}</span>
+          <h6 className="text-spt-neutral-1000 font-bold text-base font-prompt">{title}</h6>
+          <span className="text-spt-neutral-500 text-sm font-prompt font-normal">{subtitle}</span>
         </div>
       </div>
       {/* Rating Stars */}
@@ -34,7 +34,7 @@ const TestimonialCard = ({ avatar, title, subtitle, detail, className }: Testimo
         ))}
       </div>
       {/* Review Detail */}
-      <p className="text-[#5E5E5E] text-base leading-relaxed font-prompt font-normal pr-8">
+      <p className="text-spt-neutral-800 text-base leading-relaxed font-prompt font-normal pr-8">
         {detail}
       </p>
     </div>
