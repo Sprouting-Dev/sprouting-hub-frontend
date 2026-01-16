@@ -41,7 +41,7 @@ const HorizonCard = ({ image, title, detail, tag, buttonTitle, onClick, classNam
           <button
             onClick={onClick}
             className="flex items-center justify-center gap-3 px-6 mt-4 py-2 border-2 rounded-full bg-transparent transition-all duration-300 hover:scale-105 active:scale-95 font-medium border-spt-secondary-400 text-spt-secondary-400 hover:bg-spt-secondary-400 hover:text-white"
-          >
+        >
             {buttonTitle}
             <SquareArrowOutUpRight size={20} />
           </button>
