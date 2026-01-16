@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 import { cn } from '../../util/cn'
 
 interface FeatureCardProps {
@@ -17,13 +18,13 @@ export const FeatureCard = ({ image, title, detail, className }: FeatureCardProp
       )}
     >
       <div className="bg-spt-secondary-400/12 p-4 rounded-xl mb-3 [&>svg]:w-8 [&>svg]:h-8">
-        <img src={image} className="w-8 h-8 object-contain"/>
+        <Image src={image} alt={title} width={32} height={32} className="w-8 h-8 object-contain" />
       </div>
-      
+
       <h6 className="text-2xl text-spt-primary-500 mb-3">
         {title}
       </h6>
-      
+
       <b2 className="text-spt-neutral-800 font-normal">
         {detail}
       </b2>

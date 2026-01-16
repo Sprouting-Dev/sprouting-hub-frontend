@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { cn } from '../../util/cn';
 import { ArrowRight } from 'lucide-react';
 
@@ -17,10 +18,12 @@ export const ServiceCard = ({ image, icon, title, detail, className } : ServiceC
       )}
     >
       <div className="relative h-40 w-full overflow-hidden">
-        <img 
-          src={image} 
-          alt={title} 
-          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
+        <Image
+          src={image}
+          alt={title}
+          fill
+          sizes="(min-width: 768px) 50vw, 100vw"
+          className="object-cover transition-transform duration-500 group-hover:scale-105"
         />
         <div className="absolute bottom-4 left-4 z-10 bg-white p-3 rounded-xl text-spt-primary-400 opacity-90 [&>svg]:w-6 [&>svg]:h-6">
           {icon}
