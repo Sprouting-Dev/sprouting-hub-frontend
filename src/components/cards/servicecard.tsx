@@ -1,20 +1,21 @@
 import Image from 'next/image'
-import { cn } from '../../util/cn';
-import { ArrowRight } from 'lucide-react';
+import { cn } from '../../util/cn'
+import { ArrowRight } from 'lucide-react'
 
 interface ServiceCardProps {
-  image: string;
-  icon: React.ReactNode;
-  title: string;
-  detail: string;
-  className?: string;
+  image: string
+  icon: React.ReactNode
+  title: string
+  detail: string
+  className?: string
 }
 
-export const ServiceCard = ({ image, icon, title, detail, className } : ServiceCardProps) => {
+export const ServiceCard = ({ image, icon, title, detail, className }: ServiceCardProps) => {
   return (
-    <div 
-      className={cn('group flex flex-col rounded-3xl overflow-hidden shadow-md transition-all h-full',
-        className
+    <div
+      className={cn(
+        'group flex flex-col rounded-3xl overflow-hidden shadow-md transition-all h-full',
+        className,
       )}
     >
       <div className="relative h-40 w-full overflow-hidden">
@@ -31,13 +32,9 @@ export const ServiceCard = ({ image, icon, title, detail, className } : ServiceC
       </div>
 
       <div className="py-6 px-8 flex flex-col grow">
-        <h6 className="text-2xl text-spt-primary-500">
-          {title}
-        </h6>
-        
-        <b2 className="text-spt-neutral-800 leading-relaxed mt-2 mb-6 line-clamp-3">
-          {detail}
-        </b2>
+        <h6 className="text-2xl text-spt-primary-500">{title}</h6>
+
+        <b2 className="text-spt-neutral-800 leading-relaxed mt-2 mb-6 line-clamp-3">{detail}</b2>
 
         <div className="mt-auto flex items-center gap-2 text-spt-secondary-400 font-semibold text-base cursor-pointer hover:opacity-80 transition-opacity">
           <span>Learn More</span>
@@ -45,5 +42,5 @@ export const ServiceCard = ({ image, icon, title, detail, className } : ServiceC
         </div>
       </div>
     </div>
-  );
-};
+  )
+}

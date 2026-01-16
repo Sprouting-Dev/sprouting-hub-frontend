@@ -21,13 +21,9 @@ export const FeatureCard = ({ image, title, detail, className }: FeatureCardProp
         <Image src={image} alt={title} width={32} height={32} className="w-8 h-8 object-contain" />
       </div>
 
-      <h6 className="text-2xl text-spt-primary-500 mb-3">
-        {title}
-      </h6>
+      <h6 className="text-2xl text-spt-primary-500 mb-3">{title}</h6>
 
-      <b2 className="text-spt-neutral-800 font-normal">
-        {detail}
-      </b2>
+      <b2 className="text-spt-neutral-800 font-normal">{detail}</b2>
     </div>
   )
 }
