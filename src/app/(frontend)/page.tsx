@@ -97,7 +97,8 @@ export default function HomePage() {
       </div>
 
       {/* Testimonial Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pr-10 pl-10 pb-10">
+       <div className="flex justify-center items-center p-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-7xl justify-items-center">
         <TestimonialCard
           avatar="NS"
           title={t('testimonials.first.title')}
@@ -116,6 +117,7 @@ export default function HomePage() {
           subtitle={t('testimonials.third.subtitle')}
           detail={t('testimonials.third.detail')}
         />
+        </div>
       </div>
     </div>
   )
