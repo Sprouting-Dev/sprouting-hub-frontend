@@ -72,9 +72,6 @@ importers:
       '@eslint/eslintrc':
         specifier: ^3.3.0
         version: 3.3.3
-      '@playwright/test':
-        specifier: 1.56.1
-        version: 1.56.1
       '@testing-library/react':
         specifier: 16.3.0
         version: 16.3.0(@testing-library/dom@10.4.1)(@types/react-dom@19.2.1(@types/react@19.2.1))(@types/react@19.2.1)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
@@ -102,12 +99,6 @@ importers:
       jsdom:
         specifier: 26.1.0
         version: 26.1.0
-      playwright:
-        specifier: 1.56.1
-        version: 1.56.1
-      playwright-core:
-        specifier: 1.56.1
-        version: 1.56.1
       postcss:
         specifier: ^8.5.6
         version: 8.5.6
@@ -6743,6 +6734,7 @@ snapshots:
   '@playwright/test@1.56.1':
     dependencies:
       playwright: 1.56.1
+    optional: true
 
   '@radix-ui/react-avatar@1.1.10(@types/react-dom@19.2.1(@types/react@19.2.1))(@types/react@19.2.1)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)':
     dependencies:
@@ -10354,13 +10346,15 @@ snapshots:
       sonic-boom: 4.2.0
       thread-stream: 3.1.0
 
-  playwright-core@1.56.1: {}
+  playwright-core@1.56.1:
+    optional: true
 
   playwright@1.56.1:
     dependencies:
       playwright-core: 1.56.1
     optionalDependencies:
       fsevents: 2.3.2
+    optional: true
 
   pluralize@8.0.0: {}
 
