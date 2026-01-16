@@ -27,7 +27,7 @@ const TestimonialCard = ({ avatar, title, subtitle, detail, className }: Testimo
           <span className="text-spt-neutral-500 text-sm font-prompt font-normal">{subtitle}</span>
         </div>
       </div>
-      {/* Rating Stars */}
+      {/* Rating Stars  */}
       <div className="flex gap-1">
         {[...Array(5)].map((_, i) => (
           <Star key={i} className="w-4 h-4 fill-spt-secondary-400 text-spt-secondary-400" />
