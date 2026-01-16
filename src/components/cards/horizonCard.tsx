@@ -1,5 +1,6 @@
 import { cn } from '../../util/cn'
 import { SquareArrowOutUpRight } from 'lucide-react'
+import Image from 'next/image'
 
 interface HorizonCardProps {
   image: string
@@ -19,8 +20,14 @@ const HorizonCard = ({ image, title, detail, tag, buttonTitle, className }: Hori
       )}
     >
       {/* image - Left Side */}
-      <div className="flex-shrink-0 w-full md:w-2/5 aspect-video md:aspect-auto md:self-stretch bg-dark flex items-center justify-center overflow-hidden">
-        <img src={image} alt={title} className="w-full h-full object-cover" />
+      <div className="relative flex-shrink-0 w-full md:w-2/5 aspect-video md:aspect-auto md:self-stretch bg-dark flex items-center justify-center overflow-hidden">
+        <Image
+          src={image}
+          alt={title}
+          fill
+          sizes="(min-width: 768px) 40vw, 100vw"
+          className="object-cover"
+        />
       </div>
       {/* Content - Right Side */}
       <div className="flex-1 flex flex-col justify-center gap-2 p-8 bg-spt-neutral-900">
