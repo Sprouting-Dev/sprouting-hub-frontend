@@ -75,6 +75,7 @@ export default function HomePage() {
             detail={t('horizon.academy.detail')}
             tag={t('horizon.academy.tag')}
             buttonTitle={t('horizon.academy.buttonTitle')}
+            onClick={() => window.location.href = '/#'}
           />
           <HorizonCard
             image="/images/wiivor_mockup_banner.png"
@@ -82,6 +83,7 @@ export default function HomePage() {
             detail={t('horizon.wiivor.detail')}
             tag={t('horizon.wiivor.tag')}
             buttonTitle={t('horizon.wiivor.buttonTitle')}
+            onClick={() => window.location.href = '/#'}
           />
         </div>
       </div>
