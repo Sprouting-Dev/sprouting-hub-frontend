@@ -71,5 +71,11 @@
       "subtitle": "General Manager",
       "detail": "เนื้อหาออกแบบมาให้ใช้งานได้ง่าย สามารถนำไปใช้จริงได้ง่าย สามารถนำไปใช้จริงอย่างได้ Workflow อัตโนมัติได้จริง ๆ"
     }
+  },
+  "ctaFooter": {
+    "title": "Ready to Transform Your Business?",
+    "detail": "Let's build something extraordinary together. Schedule a free consultation today.",
+    "button": "Start a Project →",
+    "subdetail": "No credit card required"
   }
 }
