@@ -11,6 +11,9 @@ interface OrbProps {
   backgroundColor?: string
 }
 
+const vert = `...`
+const frag = `...`
+
 export const Orb = ({
   hue = 0,
   hoverIntensity = 0.2,
