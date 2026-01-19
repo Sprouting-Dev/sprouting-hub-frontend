@@ -11,7 +11,7 @@ export const Badge = ({ icon, text, className }: BadgeProps) => {
   return (
     <div
       className={cn(
-        'inline-flex items-center gap-2 px-4 py-2 rounded-full shadow-md text-spt-neutral-800 font-medium text-base leading-6',
+        'inline-flex items-center gap-2 px-4 py-2 rounded-full shadow-md bg-spt-neutral-100 text-spt-neutral-800 font-medium text-base leading-6',
         className,
       )}
     >

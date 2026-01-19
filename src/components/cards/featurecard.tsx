@@ -13,7 +13,7 @@ export const FeatureCard = ({ image, title, detail, className }: FeatureCardProp
   return (
     <div
       className={cn(
-        'flex flex-col items-center text-center py-5 px-6 w-auto rounded-2xl shadow-md',
+        'flex flex-col items-center bg-spt-neutral-100 text-center py-5 px-6 w-auto rounded-2xl shadow-md',
         className,
       )}
     >
