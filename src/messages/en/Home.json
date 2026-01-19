@@ -1,4 +1,10 @@
 {
+  "hero": {
+    "badge": "Future-Ready Tech Solutions",
+    "title": "Accelerate Business Growth through AI-Driven Automation & Bespoke Software.",
+    "detail": "Engineering the future of enterprise with seamless AI integration and scalable architectures designed for sustainable competitive advantage.",
+    "contact": "Contact Us"
+  },
   "features": {
     "automation": {
       "title": "Intelligent Automation",

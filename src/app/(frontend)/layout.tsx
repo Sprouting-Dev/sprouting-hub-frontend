@@ -6,6 +6,7 @@ import { Prompt } from 'next/font/google'
 
 import './styles.css'
 import { Navbar } from '@/components/layout/navigation'
+import { OrbBackground } from '@/components/layout/background'
 
 const prompt = Prompt({
   subsets: ['latin', 'thai'],
@@ -37,7 +38,9 @@ export default async function RootLayout(props: { children: ReactNode }) {
 
   return (
     <html data-theme="sprout" lang={locale} className={prompt.variable}>
-      <body className="bg-slate-50 text-slate-900 antialiased">
+      <body className="antialiased">
+        <OrbBackground />
+
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Navbar />
           <main className="min-h-screen">{children}</main>

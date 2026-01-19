@@ -14,7 +14,7 @@ export const ServiceCard = ({ image, icon, title, detail, className }: ServiceCa
   return (
     <div
       className={cn(
-        'group flex flex-col rounded-3xl overflow-hidden shadow-md transition-all h-full',
+        'group flex flex-col rounded-3xl overflow-hidden shadow-md bg-spt-neutral-100 transition-all h-full',
         className,
       )}
     >
