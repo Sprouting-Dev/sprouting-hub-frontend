@@ -24,6 +24,8 @@
   --spt-primary-500: #003d51;
   --spt-primary-10: #006e88;
 
+  --spt-gradient-mid: #0a9191;
+
   --spt-secondary-100: #8ef3e2;
   --spt-secondary-200: #56edd4;
   --spt-secondary-300: #1ee7c5;
@@ -85,6 +87,8 @@
   --spt-radius-5: 10px;
   --spt-radius-6: 12px;
   --spt-radius-7: 16px;
+  --spt-radius-8: 28px;
+  --spt-radius-9: 32px;
   --spt-radius-full: 999px;
 
   /* - Stroke */
@@ -107,6 +111,10 @@
   --spt-glow-primary: 0 0 20px rgba(0, 170, 211, 0.3);
   --spt-glow-secondary: 0 0 20px rgba(30, 231, 197, 0.3);
   --spt-glow-accent: 0 0 20px rgba(255, 107, 0, 0.3);
+
+  /* - cta button Shadows */
+  --spt-cta-button-shadow:
+    0px 4px 6px -4px rgba(0, 0, 0, 0.1), 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
 @theme {
@@ -117,6 +125,9 @@
   --color-spt-primary-400: var(--spt-primary-400);
   --color-spt-primary-500: var(--spt-primary-500);
   --color-spt-primary-10: var(--spt-primary-10);
+
+  /* Gradient Colors */
+  --color-spt-gradient-mid: var(--spt-gradient-mid);
 
   /* Secondary Colors */
   --color-spt-secondary-100: var(--spt-secondary-100);

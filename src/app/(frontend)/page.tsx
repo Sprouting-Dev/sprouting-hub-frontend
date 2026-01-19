@@ -5,6 +5,7 @@ import { useTranslations } from 'next-intl'
 import { Badge } from '@/components/commons/badge'
 import { Button } from '@/components/commons/button'
 import { FeatureCard, ServiceCard, TestimonialCard, HorizonCard } from '@/components/cards'
+import { CTAFooter } from '@/components/footer/ctaFooter'
 import { Sparkles, CodeIcon, Database, Cpu, Globe, CheckCircle, Bot, Monitor } from 'lucide-react'
 
 import './styles.css'
@@ -134,6 +135,18 @@ export default function HomePage() {
           />
         </div>
       </div>
+
+      {/* CTA Footer */}
+      <CTAFooter
+        title={t('ctaFooter.title')}
+        detail={t('ctaFooter.detail')}
+        button={{
+          label: t('ctaFooter.button'),
+          onClick: () => (window.location.href = '/#'),
+        }}
+        subdetail={t('ctaFooter.subdetail')}
+        className="my-10"
+      />
     </div>
   )
 }
