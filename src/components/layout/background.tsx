@@ -3,24 +3,7 @@
 import { Mesh, Program, Renderer, Triangle, Vec3 } from 'ogl'
 import { useEffect, useRef, useState } from 'react'
 
-interface OrbProps {
-  hue?: number
-  hoverIntensity?: number
-  rotateOnHover?: boolean
-  forceHoverState?: boolean
-  backgroundColor?: string
-}
-
-export const Orb = ({
-  hue = 0,
-  hoverIntensity = 0.2,
-  rotateOnHover = true,
-  forceHoverState = false,
-  backgroundColor = '#000000',
-}: OrbProps) => {
-  const ctnDom = useRef<HTMLDivElement>(null)
-
-  const vert = /* glsl */ `
+const vert = /* glsl */ `
     precision highp float;
     attribute vec2 position;
     attribute vec2 uv;
@@ -31,7 +14,7 @@ export const Orb = ({
     }
   `
 
-  const frag = /* glsl */ `
+const frag = /* glsl */ `
     precision highp float;
 
     uniform float iTime;
@@ -192,6 +175,23 @@ export const Orb = ({
       gl_FragColor = vec4(col.rgb * col.a, col.a);
     }
   `
+
+interface OrbProps {
+  hue?: number
+  hoverIntensity?: number
+  rotateOnHover?: boolean
+  forceHoverState?: boolean
+  backgroundColor?: string
+}
+
+export const Orb = ({
+  hue = 0,
+  hoverIntensity = 0.2,
+  rotateOnHover = true,
+  forceHoverState = false,
+  backgroundColor = '#000000',
+}: OrbProps) => {
+  const ctnDom = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     const container = ctnDom.current
