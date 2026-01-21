@@ -74,8 +74,8 @@
   },
   "ctaFooter": {
     "title": "Ready to Transform Your Business?",
-    "detail": "Let's build something extraordinary together. Schedule a free consultation today.",
+    "description": "Let's build something extraordinary together. Schedule a free consultation today.",
     "button": "Start a Project →",
-    "subdetail": "No credit card required"
+    "subDescription": "No credit card required"
   }
 }

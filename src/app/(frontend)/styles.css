@@ -345,3 +345,14 @@ body {
     @apply font-normal text-[0.5rem] leading-3;
   }
 }
+
+/* CTA Footer Description - Control line breaks */
+.cta-footer-description {
+  max-width: 28rem;
+}
+
+@media (min-width: 768px) {
+  .cta-footer-description {
+    max-width: 36rem;
+  }
+}
