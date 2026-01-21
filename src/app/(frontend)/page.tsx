@@ -139,12 +139,12 @@ export default function HomePage() {
       {/* CTA Footer */}
       <CTAFooter
         title={t('ctaFooter.title')}
-        detail={t('ctaFooter.detail')}
+        description={t('ctaFooter.description')}
         button={{
           label: t('ctaFooter.button'),
           onClick: () => (window.location.href = '/#'),
         }}
-        subdetail={t('ctaFooter.subdetail')}
+        subDescription={t('ctaFooter.subDescription')}
         className="my-10"
       />
     </div>
