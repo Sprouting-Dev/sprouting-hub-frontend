@@ -57,6 +57,24 @@
     "tailwind": "Tailwind CSS",
     "typescript": "TypeScript"
   },
+  "statistics": {
+    "projects": {
+      "value": "50+",
+      "label": "Projects Delivered"
+    },
+    "efficiency": {
+      "value": "30%",
+      "label": "Efficiency Increased"
+    },
+    "experience": {
+      "value": "5+",
+      "label": "Years Expertise"
+    },
+    "satisfaction": {
+      "value": "100%",
+      "label": "Client Satisfaction"
+    }
+  },
   "testimonials": {
     "title": "Trusted by Industry Leaders",
     "first": {
