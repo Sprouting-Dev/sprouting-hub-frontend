@@ -33,7 +33,27 @@
       "detail": "Build secure, scalable digital solutions tailored to your business. Our full-stack team engineers the robust technology backbone you need for long-term success."
     }
   },
+  "process": {
+    "step1": {
+      "title": "Discovery",
+      "detail": "We analyze your requirements and business goals to build a roadmap."
+    },
+    "step2": {
+      "title": "Design",
+      "detail": "Architecting the perfect solution with a focus on user experience."
+    },
+    "step3": {
+      "title": "Development",
+      "detail": "Agile coding sprints with regular feedback and quality assurance."
+    },
+    "step4": {
+      "title": "Launch",
+      "detail": "Deploying to production with full support and maintenance."
+    }
+  },
   "horizon": {
+    "title": "Our Products & Initiatives",
+    "detail": "Beyond client services, we build platforms that empower the next generation of developers and businesses.",
     "academy": {
       "title": "Sprouting Tech Academy",
       "detail": "Sprouting Tech Academy is a specialized professional learning institution dedicated to advancing expertise in AI and Workflow Automation. Our curriculum is designed around industry-leading platforms, including Make.com and n8n, equipping learners with the technical proficiency and strategic mindset required to lead in an increasingly automated digital economy.",
@@ -56,6 +76,7 @@
     "typescript": "TypeScript"
   },
   "testimonials": {
+    "title": "Trusted by Industry Leaders",
     "first": {
       "title": "Natthakit Saetan",
       "subtitle": "General Manager",
