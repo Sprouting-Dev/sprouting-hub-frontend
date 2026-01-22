@@ -2,8 +2,7 @@
 
 import React from 'react'
 import { useTranslations } from 'next-intl'
-import { Badge } from '@/components/commons/badge'
-import { Button } from '@/components/commons/button'
+import { Badge, Button, Process } from '@/components/commons/'
 import { FeatureCard, ServiceCard, TestimonialCard, HorizonCard } from '@/components/cards'
 import { CTAFooter } from '@/components/footer/ctaFooter'
 import { Sparkles, CodeIcon, Database, Cpu, Globe, CheckCircle, Bot, Monitor } from 'lucide-react'
@@ -16,7 +15,7 @@ export default function HomePage() {
   return (
     <div className="flex flex-col gap-5">
       {/* Hero Section */}
-      <div className="relative flex flex-col items-center justify-center min-h-[90vh] px-4 pt-20  pb-10 text-center">
+      <div className="relative flex flex-col items-center justify-center min-h-[90vh] px-4 pt-20 pb-10 text-center">
         <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-teal-50 px-4 py-1.5 text-sm font-bold text-spt-primary-400">
           <Sparkles className="w-4 h-4" />
           {t('hero.badge')}
@@ -38,33 +37,45 @@ export default function HomePage() {
         </div>
       </div>
 
+      <div className="flex flex-col items-center gap-3">
+        <h3 className="text-4xl text-spt-primary-500 text-center">Value Proposition</h3>
+        <div className="h-1 w-25 bg-gradient-to-r from-spt-secondary-400 to-spt-primary-400 rounded-full" />
+      </div>
+
       {/* Feature Card */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 p-10">
-        <FeatureCard
-          image="/icons/Bot.png"
-          title={t('features.automation.title')}
-          detail={t('features.automation.detail')}
-        />
-        <FeatureCard
-          image="/icons/Server.png"
-          title={t('features.architecture.title')}
-          detail={t('features.architecture.detail')}
-        />
-        <FeatureCard
-          image="/icons/TrendingUp.png"
-          title={t('features.delivery.title')}
-          detail={t('features.delivery.detail')}
-        />
-        <FeatureCard
-          image="/icons/Sparkles.png"
-          title={t('features.partnership.title')}
-          detail={t('features.partnership.detail')}
-        />
+      <div className="flex flex-col items-center gap-3">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 p-10 max-w-7xl">
+          <FeatureCard
+            image="/icons/Bot.png"
+            title={t('features.automation.title')}
+            detail={t('features.automation.detail')}
+          />
+          <FeatureCard
+            image="/icons/Server.png"
+            title={t('features.architecture.title')}
+            detail={t('features.architecture.detail')}
+          />
+          <FeatureCard
+            image="/icons/TrendingUp.png"
+            title={t('features.delivery.title')}
+            detail={t('features.delivery.detail')}
+          />
+          <FeatureCard
+            image="/icons/Sparkles.png"
+            title={t('features.partnership.title')}
+            detail={t('features.partnership.detail')}
+          />
+        </div>
+      </div>
+
+      <div className="flex flex-col items-center gap-3">
+        <h3 className="text-4xl text-spt-primary-500 text-center">Our Core Services</h3>
+        <div className="h-1 w-25 bg-gradient-to-r from-spt-secondary-400 to-spt-primary-400 rounded-full" />
       </div>
 
       {/* Service Cards */}
       <div className="flex justify-center items-center p-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl w-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl">
           <ServiceCard
             image="/images/AI & Workflow Automation.png"
             icon={<Bot />}
@@ -80,30 +91,74 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* Horizon Cards */}
-      <div className="flex justify-center items-center p-10 bg-spt-neutral-1000">
-        <div className="flex flex-col gap-5 w-full items-center">
-          <HorizonCard
-            image="/images/sprouting_academy_thum.png"
-            title={t('horizon.academy.title')}
-            detail={t('horizon.academy.detail')}
-            tag={t('horizon.academy.tag')}
-            buttonTitle={t('horizon.academy.buttonTitle')}
-            onClick={() => (window.location.href = '/#')}
-          />
-          <HorizonCard
-            image="/images/wiivor_mockup_banner.png"
-            title={t('horizon.wiivor.title')}
-            detail={t('horizon.wiivor.detail')}
-            tag={t('horizon.wiivor.tag')}
-            buttonTitle={t('horizon.wiivor.buttonTitle')}
-            onClick={() => (window.location.href = '/#')}
+      {/* Process Section */}
+      <div className="flex justify-center items-center p-10">
+        <div className="max-w-6xl w-full">
+          <h3 className="text-[2.5rem] text-center text-spt-primary-500 mb-3">Our Methodology</h3>
+          <p className="text-lg font-base text-center text-spt-neutral-800 mb-15">
+            A streamlined journey from concept to reality.
+          </p>
+          <Process
+            steps={[
+              {
+                title: t('process.step1.title'),
+                detail: t('process.step1.detail'),
+              },
+              {
+                title: t('process.step2.title'),
+                detail: t('process.step2.detail'),
+              },
+              {
+                title: t('process.step3.title'),
+                detail: t('process.step3.detail'),
+              },
+              {
+                title: t('process.step4.title'),
+                detail: t('process.step4.detail'),
+              },
+            ]}
           />
         </div>
       </div>
 
+      {/* Horizon Cards */}
+      <div className="flex justify-center items-center py-10 px-10 bg-spt-neutral-1000">
+        <div className="flex flex-col gap-15 w-full max-w-6xl m-10">
+          <div className="flex flex-col text-left">
+            <h2 className="text-[2.250rem] text-spt-secondary-400">{t('horizon.title')}</h2>
+            <b1 className="text-spt-neutral-500 text-lg max-w-xl font-normal">
+              {t('horizon.detail')}
+            </b1>
+          </div>
+          <div className="flex flex-col gap-6 w-full items-center">
+            <HorizonCard
+              image="/images/sprouting_academy_thum.png"
+              title={t('horizon.academy.title')}
+              detail={t('horizon.academy.detail')}
+              tag={t('horizon.academy.tag')}
+              buttonTitle={t('horizon.academy.buttonTitle')}
+              onClick={() => (window.location.href = '/#')}
+            />
+            <HorizonCard
+              image="/images/wiivor_mockup_banner.png"
+              title={t('horizon.wiivor.title')}
+              detail={t('horizon.wiivor.detail')}
+              tag={t('horizon.wiivor.tag')}
+              buttonTitle={t('horizon.wiivor.buttonTitle')}
+              onClick={() => (window.location.href = '/#')}
+            />
+          </div>
+        </div>
+      </div>
+
+      <div className="flex flex-col items-center gap-3 mt-10">
+        <b3 className="font-bold bg-gradient-to-r from-spt-secondary-400 to-spt-primary-400 bg-clip-text text-transparent text-center">
+          Powered By Modern Tech
+        </b3>
+      </div>
+
       {/* Badge */}
-      <div className="flex items-center gap-3 justify-center flex-wrap p-5">
+      <div className="flex items-center gap-3 justify-center flex-wrap mb-10">
         <Badge icon={<CodeIcon />} text={t('badges.reactNext')} />
         <Badge icon={<Database />} text={t('badges.postgres')} />
         <Badge icon={<Cpu />} text={t('badges.pythonAi')} />
@@ -112,8 +167,12 @@ export default function HomePage() {
         <Badge icon={<CodeIcon />} text={t('badges.typescript')} />
       </div>
 
+      <div className="flex flex-col items-center gap-3">
+        <h3 className="text-4xl text-spt-primary-500 text-center">{t('testimonials.title')}</h3>
+      </div>
+
       {/* Testimonial Cards */}
-      <div className="flex justify-center items-center p-10">
+      <div className="flex justify-center items-center px-10 pb-10">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-7xl justify-items-center">
           <TestimonialCard
             avatar="NS"
