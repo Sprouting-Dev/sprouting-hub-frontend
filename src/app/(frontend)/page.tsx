@@ -3,7 +3,7 @@
 import React from 'react'
 import { useTranslations } from 'next-intl'
 import { Badge, Button } from '@/components/commons/'
-import { FeatureCard, ServiceCard, TestimonialCard, HorizonCard } from '@/components/cards'
+import { FeatureCard, ServiceCard, TestimonialCard, HorizonCard, SmallCard } from '@/components/cards'
 import { CTAFooter } from '@/components/footer/ctaFooter'
 import { Sparkles, CodeIcon, Database, Cpu, Globe, CheckCircle, Bot, Monitor } from 'lucide-react'
 
@@ -118,6 +118,28 @@ export default function HomePage() {
               onClick={() => (window.location.href = '/#')}
             />
           </div>
+        </div>
+      </div>
+
+      {/* Small Cards */}
+      <div className="flex justify-center items-center p-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full mx-40">
+          <SmallCard
+            value={t('statistics.projects.value')}
+            label={t('statistics.projects.label')}
+          />
+          <SmallCard
+            value={t('statistics.efficiency.value')}
+            label={t('statistics.efficiency.label')}
+          />
+          <SmallCard
+            value={t('statistics.experience.value')}
+            label={t('statistics.experience.label')}
+          />
+          <SmallCard
+            value={t('statistics.satisfaction.value')}
+            label={t('statistics.satisfaction.label')}
+          />
         </div>
       </div>
 
