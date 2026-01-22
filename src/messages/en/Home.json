@@ -33,24 +33,6 @@
       "detail": "Build secure, scalable digital solutions tailored to your business. Our full-stack team engineers the robust technology backbone you need for long-term success."
     }
   },
-  "process": {
-    "step1": {
-      "title": "Discovery",
-      "detail": "We analyze your requirements and business goals to build a roadmap."
-    },
-    "step2": {
-      "title": "Design",
-      "detail": "Architecting the perfect solution with a focus on user experience."
-    },
-    "step3": {
-      "title": "Development",
-      "detail": "Agile coding sprints with regular feedback and quality assurance."
-    },
-    "step4": {
-      "title": "Launch",
-      "detail": "Deploying to production with full support and maintenance."
-    }
-  },
   "horizon": {
     "title": "Our Products & Initiatives",
     "detail": "Beyond client services, we build platforms that empower the next generation of developers and businesses.",
