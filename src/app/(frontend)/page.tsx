@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { useTranslations } from 'next-intl'
-import { Badge, Button, Process } from '@/components/commons/'
+import { Badge, Button } from '@/components/commons/'
 import { FeatureCard, ServiceCard, TestimonialCard, HorizonCard } from '@/components/cards'
 import { Sparkles, CodeIcon, Database, Cpu, Globe, CheckCircle, Bot, Monitor } from 'lucide-react'
 
@@ -86,36 +86,6 @@ export default function HomePage() {
             icon={<Monitor />}
             title={t('services.software.title')}
             detail={t('services.software.detail')}
-          />
-        </div>
-      </div>
-
-      {/* Process Section */}
-      <div className="flex justify-center items-center p-10">
-        <div className="max-w-6xl w-full">
-          <h3 className="text-[2.5rem] text-center text-spt-primary-500 mb-3">Our Methodology</h3>
-          <p className="text-lg font-base text-center text-spt-neutral-800 mb-15">
-            A streamlined journey from concept to reality.
-          </p>
-          <Process
-            steps={[
-              {
-                title: t('process.step1.title'),
-                detail: t('process.step1.detail'),
-              },
-              {
-                title: t('process.step2.title'),
-                detail: t('process.step2.detail'),
-              },
-              {
-                title: t('process.step3.title'),
-                detail: t('process.step3.detail'),
-              },
-              {
-                title: t('process.step4.title'),
-                detail: t('process.step4.detail'),
-              },
-            ]}
           />
         </div>
       </div>
