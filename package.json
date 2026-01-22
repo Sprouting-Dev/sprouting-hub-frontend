@@ -70,9 +70,13 @@
   },
   "pnpm": {
     "onlyBuiltDependencies": [
-      "sharp",
+      "@parcel/watcher",
       "esbuild",
+      "sharp",
       "unrs-resolver"
+    ],
+    "ignoredBuiltDependencies": [
+      "@swc/core"
     ]
   }
 }
