@@ -67,7 +67,7 @@ const HeroBanner = ({
         </h1>
 
         {/* Description */}
-        <p className="mt-6 max-w-2xl text-xl font-light leading-8 text-center text-spt-primary-500">
+        <p className="mt-6 max-w-xl text-xl font-light leading-8 text-center text-spt-primary-500">
           {description}
         </p>
       </div>
