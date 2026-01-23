@@ -3,7 +3,13 @@
 import React from 'react'
 import { useTranslations } from 'next-intl'
 import { Badge, Button } from '@/components/commons/'
-import { FeatureCard, ServiceCard, TestimonialCard, HorizonCard, SmallCard } from '@/components/cards'
+import {
+  FeatureCard,
+  ServiceCard,
+  TestimonialCard,
+  HorizonCard,
+  SmallCard,
+} from '@/components/cards'
 import { CTAFooter } from '@/components/footer/ctaFooter'
 import { Sparkles, CodeIcon, Database, Cpu, Globe, CheckCircle, Bot, Monitor } from 'lucide-react'
 
