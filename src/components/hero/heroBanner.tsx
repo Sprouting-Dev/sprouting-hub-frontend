@@ -21,10 +21,15 @@ const HeroBanner = ({
 }: HeroBannerProps) => {
   return (
     <div
+<<<<<<< HEAD
       className={cn(
         'relative w-full overflow-hidden min-h-[745px] bg-spt-neutral-100 pt-12',
         className,
       )}
+=======
+      className={cn('relative w-full overflow-hidden', className)}
+      style={{ minHeight: 'calc(100vh - var(--navbar-height))' }}
+>>>>>>> 60f4361 (feat(ui): add Services page with HeroBanner component)
     >
       {/* Background Image with Opacity */}
       <div className="absolute inset-0 z-0">
