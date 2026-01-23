@@ -3,10 +3,7 @@
 import React from 'react'
 import { useTranslations } from 'next-intl'
 import { Contact, ContactData } from '@/components/commons'
-<<<<<<< HEAD
 import { HeroBanner } from '@/components/hero'
-=======
->>>>>>> abeaf79 (feat: add contact page)
 
 export default function ContactPage() {
   const t = useTranslations('Contact')
