@@ -33,6 +33,10 @@
   --spt-secondary-500: #0b6656;
   --spt-secondary-10: #13b499;
 
+  /* Secondary Alpha Colors */
+  --spt-secondary-alpha-10: #13b4991a;
+  --spt-secondary-alpha-20: #13b49933;
+
   --spt-neutral-100: #f5f5f5;
   --spt-neutral-150: #d1d5dc;
   --spt-neutral-200: #dfdfdf;
@@ -115,9 +119,6 @@
   /* - cta button Shadows */
   --spt-cta-button-shadow:
     0px 4px 6px -4px rgba(0, 0, 0, 0.1), 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
-
-  /* - Layout */
-  --navbar-height: 72px;
 }
 
 @theme {
@@ -139,6 +140,8 @@
   --color-spt-secondary-400: var(--spt-secondary-400);
   --color-spt-secondary-500: var(--spt-secondary-500);
   --color-spt-secondary-10: var(--spt-secondary-10);
+  --color-spt-secondary-alpha-10: var(--spt-secondary-alpha-10);
+  --color-spt-secondary-alpha-20: var(--spt-secondary-alpha-20);
 
   /* Neutral Colors */
   --color-spt-neutral-100: var(--spt-neutral-100);
@@ -310,6 +313,34 @@ body {
   box-shadow: var(--shadow);
 }
 
+/* CTA Footer Description - Control line breaks */
+.cta-footer-description {
+  max-width: 28rem;
+}
+
+@media (min-width: 768px) {
+  .cta-footer-description {
+    max-width: 36rem;
+  }
+}
+
+/* Hero Banner Gradients */
+.gradient-title {
+  background: linear-gradient(
+    180deg,
+    var(--spt-primary-400) 0%,
+    var(--spt-gradient-mid) 50%,
+    var(--spt-secondary-10) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-background {
+  background: linear-gradient(180deg, rgba(19, 180, 153, 0) 0%, var(--spt-primary-400) 136.92%);
+}
+
 @layer base {
   h1 {
     @apply font-bold text-[3.5rem] leading-21;
@@ -346,16 +377,5 @@ body {
   }
   b6 {
     @apply font-normal text-[0.5rem] leading-3;
-  }
-}
-
-/* CTA Footer Description - Control line breaks */
-.cta-footer-description {
-  max-width: 28rem;
-}
-
-@media (min-width: 768px) {
-  .cta-footer-description {
-    max-width: 36rem;
   }
 }
