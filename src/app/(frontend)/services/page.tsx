@@ -1,10 +1,7 @@
 'use client'
 
 import { useTranslations } from 'next-intl'
-<<<<<<< HEAD
 import { Process } from '@/components/commons/'
-=======
->>>>>>> 60f4361 (feat(ui): add Services page with HeroBanner component)
 import { HeroBanner } from '@/components/hero'
 
 export default function ServicesPage() {
