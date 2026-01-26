@@ -1,5 +1,5 @@
-export * from './featurecard'
+export * from './featureCard'
 export * from './horizonCard'
-export * from './servicecard'
+export * from './serviceCard'
 export * from './testimonialCard'
 export * from './smallCard'

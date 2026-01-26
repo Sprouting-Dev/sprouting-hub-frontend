@@ -1,0 +1,14 @@
+{
+  "contact": {
+    "name": "Full name*",
+    "namerequire": "Please enter your full name.",
+    "company": "Company",
+    "email": "Email address*",
+    "emailrequire": "Please enter your email address.",
+    "emailinvalid": "Please enter a valid email address.",
+    "message": "Message",
+    "messagerequire": "Please enter your message.",
+    "submit": "Submit",
+    "submitting": "Sending..."
+  }
+}
