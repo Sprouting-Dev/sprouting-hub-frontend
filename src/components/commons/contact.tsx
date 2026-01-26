@@ -1,8 +1,12 @@
 'use client'
 
 import React, { useState } from 'react'
+<<<<<<< HEAD
 import { useTranslations } from 'next-intl'
 import { Button } from '@/components/commons/'
+=======
+import { Button } from '@/components/commons/button'
+>>>>>>> 868581a (feat: create contact component)
 import { cn } from '../../util/cn'
 
 export interface ContactData {
@@ -13,6 +17,25 @@ export interface ContactData {
 }
 
 interface ContactProps {
+<<<<<<< HEAD
+=======
+  placeholders: {
+    name: string
+    company: string
+    email: string
+    message: string
+  }
+  errorMessages: {
+    nameRequired: string
+    emailRequired: string
+    emailInvalid: string
+    messageRequired: string
+  }
+  buttonText: {
+    submit: string
+    submitting: string
+  }
+>>>>>>> 868581a (feat: create contact component)
   onSubmit: (data: ContactData) => Promise<void>
 }
 
@@ -22,9 +45,18 @@ interface FormErrors {
   message?: string
 }
 
+<<<<<<< HEAD
 export const Contact: React.FC<ContactProps> = ({ onSubmit }) => {
   const t = useTranslations('Contact')
 
+=======
+export const Contact: React.FC<ContactProps> = ({
+  placeholders,
+  errorMessages,
+  buttonText,
+  onSubmit,
+}) => {
+>>>>>>> 868581a (feat: create contact component)
   const [formData, setFormData] = useState<ContactData>({
     name: '',
     company: '',
