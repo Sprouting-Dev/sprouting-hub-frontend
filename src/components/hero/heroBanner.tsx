@@ -21,8 +21,10 @@ const HeroBanner = ({
 }: HeroBannerProps) => {
   return (
     <div
-      className={cn('relative w-full overflow-hidden', className)}
-      style={{ minHeight: 'calc(100vh - var(--navbar-height))' }}
+      className={cn(
+        'relative w-full overflow-hidden min-h-[745px] bg-spt-neutral-100 pt-12',
+        className,
+      )}
     >
       {/* Background Image with Opacity */}
       <div className="absolute inset-0 z-0">
@@ -34,33 +36,19 @@ const HeroBanner = ({
           priority
         />
         {/* Gradient Overlay */}
-        <div
-          className="absolute inset-0 opacity-60"
-          style={{
-            background:
-              'linear-gradient(180deg, rgba(19, 180, 153, 0) 0%, var(--spt-primary-400) 136.92%)',
-          }}
-        />
+        <div className="absolute inset-0 gradient-background" />
       </div>
 
       {/* Content */}
-      <div className="relative z-10 min-h-full flex flex-col items-center justify-center text-center px-8 md:px-20 lg:px-40 xl:px-60 py-20 md:py-24 lg:py-32">
+      <div className="relative z-10 min-h-full flex flex-col items-center justify-center text-center px-4 md:px-12 lg:px-24 xl:px-40 py-12 md:py-16 lg:py-20">
         {/* Badge */}
-        <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-spt-secondary-100/20 border border-spt-secondary-400/30 px-4 py-2 text-sm font-semibold text-spt-secondary-400">
+        <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-spt-secondary-alpha-10 border border-spt-secondary-alpha-20 px-4 py-2 text-sm font-semibold text-spt-secondary-400">
           <Sparkles size={14} className="text-spt-secondary-400" strokeWidth={1.33} />
           {badge}
         </div>
 
         {/* Title */}
-        <h1
-          className="max-w-4xl font-bold text-4xl md:text-5xl lg:text-6xl mb-4 bg-clip-text text-transparent"
-          style={{
-            background:
-              'linear-gradient(180deg, var(--spt-primary-400) 0%, var(--spt-gradient-mid) 50%, var(--spt-secondary-400) 100%)',
-            WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent',
-          }}
-        >
+        <h1 className="max-w-4xl font-bold text-4xl md:text-5xl lg:text-6xl mb-4 gradient-title">
           {title}
           <br />
           {subtitle}
