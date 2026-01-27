@@ -1,4 +1,10 @@
 {
+  "hero": {
+    "badge": "Get in Touch",
+    "title": "Ready to Scale",
+    "subtitle": "Your Business?",
+    "description": "Whether you need intelligent automation or a custom software solution, our team is here to help you grow."
+  },
   "contact": {
     "title": "Contact Us",
     "name": "Full name*",
