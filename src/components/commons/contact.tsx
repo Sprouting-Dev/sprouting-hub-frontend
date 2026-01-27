@@ -12,19 +12,7 @@ export interface ContactData {
   message: string
 }
 
-interface ContactText {
-  name: string
-  namerequire: string
-  company: string
-  email: string
-  emailrequire: string
-  emailinvalid: string
-  message: string
-  messagerequire: string
-}
-
 interface ContactProps {
-  text: ContactText
   onSubmit: (data: ContactData) => Promise<void>
 }
 
@@ -34,7 +22,7 @@ interface FormErrors {
   message?: string
 }
 
-export const Contact: React.FC<ContactProps> = ({ text, onSubmit }) => {
+export const Contact: React.FC<ContactProps> = ({ onSubmit }) => {
   const t = useTranslations('Contact')
 
   const [formData, setFormData] = useState<ContactData>({
@@ -50,20 +38,16 @@ export const Contact: React.FC<ContactProps> = ({ text, onSubmit }) => {
   const validate = (): boolean => {
     const newErrors: FormErrors = {}
 
-    if (!formData.name.trim()) {
-      newErrors.name = text.namerequire
-    }
+    if (!formData.name.trim()) newErrors.name = t('contact.namerequire')
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
     if (!formData.email.trim()) {
-      newErrors.email = text.emailrequire
+      newErrors.email = t('contact.emailrequire')
     } else if (!emailRegex.test(formData.email)) {
-      newErrors.email = text.emailinvalid
+      newErrors.email = t('contact.emailinvalid')
     }
 
-    if (!formData.message.trim()) {
-      newErrors.message = text.messagerequire
-    }
+    if (!formData.message.trim()) newErrors.message = t('contact.messagerequire')
 
     setErrors(newErrors)
     return Object.keys(newErrors).length === 0
@@ -99,7 +83,7 @@ export const Contact: React.FC<ContactProps> = ({ text, onSubmit }) => {
           <input
             type="text"
             name="name"
-            placeholder={text.name}
+            placeholder={t('contact.name')}
             value={formData.name}
             onChange={handleChange}
             className={cn(
@@ -114,7 +98,7 @@ export const Contact: React.FC<ContactProps> = ({ text, onSubmit }) => {
           <input
             type="text"
             name="company"
-            placeholder={text.company}
+            placeholder={t('contact.company')}
             value={formData.company}
             onChange={handleChange}
             className="w-full px-6 py-3 rounded-full border text-base text-spt-neutral-1000 outline-none transition-all placeholder:text-black/50 focus:border-spt-primary-400"
@@ -125,7 +109,7 @@ export const Contact: React.FC<ContactProps> = ({ text, onSubmit }) => {
           <input
             type="email"
             name="email"
-            placeholder={text.email}
+            placeholder={t('contact.email')}
             value={formData.email}
             onChange={handleChange}
             className={cn(
@@ -139,7 +123,7 @@ export const Contact: React.FC<ContactProps> = ({ text, onSubmit }) => {
         <div className="flex flex-col gap-1">
           <textarea
             name="message"
-            placeholder={text.message}
+            placeholder={t('contact.message')}
             rows={3}
             value={formData.message}
             onChange={handleChange}

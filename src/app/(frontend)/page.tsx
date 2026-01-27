@@ -2,6 +2,7 @@
 
 import React from 'react'
 import { useTranslations } from 'next-intl'
+import { useRouter } from 'next/navigation'
 import { Badge, Button } from '@/components/commons/'
 import {
   FeatureCard,
@@ -17,6 +18,7 @@ import './styles.css'
 
 export default function HomePage() {
   const t = useTranslations('Home')
+  const router = useRouter()
 
   return (
     <div className="flex flex-col gap-5">
@@ -39,7 +41,7 @@ export default function HomePage() {
             color="primary"
             size="lg"
             variant="pill"
-            onClick={() => (window.location.href = '/contact')}
+            onClick={() => router.push('/contact')}
           />
         </div>
       </div>
