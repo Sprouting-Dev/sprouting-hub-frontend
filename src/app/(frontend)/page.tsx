@@ -39,6 +39,7 @@ export default function HomePage() {
             color="primary"
             size="lg"
             variant="pill"
+            onClick={() => (window.location.href = '/contact')}
           />
         </div>
       </div>

@@ -1,7 +1,8 @@
 'use client'
 
 import React, { useState } from 'react'
-import { Button } from '@/components/commons/button'
+import { useTranslations } from 'next-intl'
+import { Button } from '@/components/commons/'
 import { cn } from '../../util/cn'
 
 export interface ContactData {
@@ -11,23 +12,19 @@ export interface ContactData {
   message: string
 }
 
+interface ContactText {
+  name: string
+  namerequire: string
+  company: string
+  email: string
+  emailrequire: string
+  emailinvalid: string
+  message: string
+  messagerequire: string
+}
+
 interface ContactProps {
-  placeholders: {
-    name: string
-    company: string
-    email: string
-    message: string
-  }
-  errorMessages: {
-    nameRequired: string
-    emailRequired: string
-    emailInvalid: string
-    messageRequired: string
-  }
-  buttonText: {
-    submit: string
-    submitting: string
-  }
+  text: ContactText
   onSubmit: (data: ContactData) => Promise<void>
 }
 
@@ -37,12 +34,9 @@ interface FormErrors {
   message?: string
 }
 
-export const Contact: React.FC<ContactProps> = ({
-  placeholders,
-  errorMessages,
-  buttonText,
-  onSubmit,
-}) => {
+export const Contact: React.FC<ContactProps> = ({ text, onSubmit }) => {
+  const t = useTranslations('Contact')
+
   const [formData, setFormData] = useState<ContactData>({
     name: '',
     company: '',
@@ -57,18 +51,18 @@ export const Contact: React.FC<ContactProps> = ({
     const newErrors: FormErrors = {}
 
     if (!formData.name.trim()) {
-      newErrors.name = errorMessages.nameRequired
+      newErrors.name = text.namerequire
     }
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
     if (!formData.email.trim()) {
-      newErrors.email = errorMessages.emailRequired
+      newErrors.email = text.emailrequire
     } else if (!emailRegex.test(formData.email)) {
-      newErrors.email = errorMessages.emailInvalid
+      newErrors.email = text.emailinvalid
     }
 
     if (!formData.message.trim()) {
-      newErrors.message = errorMessages.messageRequired
+      newErrors.message = text.messagerequire
     }
 
     setErrors(newErrors)
@@ -105,7 +99,7 @@ export const Contact: React.FC<ContactProps> = ({
           <input
             type="text"
             name="name"
-            placeholder={placeholders.name}
+            placeholder={text.name}
             value={formData.name}
             onChange={handleChange}
             className={cn(
@@ -120,7 +114,7 @@ export const Contact: React.FC<ContactProps> = ({
           <input
             type="text"
             name="company"
-            placeholder={placeholders.company}
+            placeholder={text.company}
             value={formData.company}
             onChange={handleChange}
             className="w-full px-6 py-3 rounded-full border text-base text-spt-neutral-1000 outline-none transition-all placeholder:text-black/50 focus:border-spt-primary-400"
@@ -131,7 +125,7 @@ export const Contact: React.FC<ContactProps> = ({
           <input
             type="email"
             name="email"
-            placeholder={placeholders.email}
+            placeholder={text.email}
             value={formData.email}
             onChange={handleChange}
             className={cn(
@@ -145,7 +139,7 @@ export const Contact: React.FC<ContactProps> = ({
         <div className="flex flex-col gap-1">
           <textarea
             name="message"
-            placeholder={placeholders.message}
+            placeholder={text.message}
             rows={3}
             value={formData.message}
             onChange={handleChange}
@@ -159,7 +153,7 @@ export const Contact: React.FC<ContactProps> = ({
 
         <Button
           type="submit"
-          label={isSubmitting ? buttonText.submitting : buttonText.submit}
+          label={isSubmitting ? t('contact.submitting') : t('contact.submit')}
           className="text-base hover:scale-101 active:scale-100"
           color="primary"
           size="lg"
