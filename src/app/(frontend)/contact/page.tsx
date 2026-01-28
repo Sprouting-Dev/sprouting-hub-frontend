@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { useTranslations } from 'next-intl'
-import { Contact, ContactData } from '@/components/commons'
+import { Address, Contact, ContactData } from '@/components/commons'
 import { HeroBanner } from '@/components/hero'
 
 export default function ContactPage() {
@@ -25,7 +25,17 @@ export default function ContactPage() {
         backgroundImage="/images/Software Development.png"
       />
 
-      <div className="flex flex-col items-center gap-3 pt-4">
+      <div className="flex flex-col items-center gap-3 pt-18">
+        <h3 className="text-4xl text-spt-primary-500 text-center">{t('company.title')}</h3>
+        <div className="h-1 w-25 bg-gradient-to-r from-spt-secondary-400 to-spt-primary-400 rounded-full" />
+      </div>
+
+      {/* Address */}
+      <div className="flex flex-col items-center pt-8 pb-20">
+        <Address />
+      </div>
+
+      <div className="flex flex-col items-center gap-3 pt-18">
         <h3 className="text-4xl text-spt-primary-400 text-center">{t('contact.title')}</h3>
         <div className="h-1 w-25 bg-gradient-to-r from-spt-secondary-400 to-spt-primary-400 rounded-full" />
       </div>
