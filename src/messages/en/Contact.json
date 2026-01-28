@@ -5,6 +5,12 @@
     "subtitle": "Your Business?",
     "description": "Whether you need intelligent automation or a custom software solution, our team is here to help you grow."
   },
+  "company": {
+    "title": "Company Detail",
+    "address": "Address",
+    "email": "Email",
+    "tel": "Tel."
+  },
   "contact": {
     "title": "Contact Us",
     "name": "Full name*",

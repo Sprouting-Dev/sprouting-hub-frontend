@@ -1,3 +1,4 @@
+export * from './address'
 export * from './badge'
 export * from './button'
 export * from './contact'
