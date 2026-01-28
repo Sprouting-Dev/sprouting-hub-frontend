@@ -1,5 +1,6 @@
 'use client'
-
+import { TwoColumnCard } from '@/components/cards'
+import { ArrowRight } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 import { Process, Title } from '@/components/commons/'
 import { HeroBanner } from '@/components/hero'
@@ -45,6 +46,20 @@ export default function ServicesPage() {
             ]}
           />
         </div>
+      </div>
+
+      {/* Two Column Card Section */}
+      <div className="flex justify-center items-center w-full px-4 py-8 md:py-16">
+        <TwoColumnCard
+          image="/images/AI & Workflow Automation.png"
+          title="Our Products"
+          detail="Discover amazing products"
+          imagePosition="left"
+          button={{
+            title: 'View Products',
+            onClick: () => (window.location.href = '/#'),
+          }}
+        />
       </div>
     </div>
   )
