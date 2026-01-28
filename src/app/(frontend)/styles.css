@@ -296,6 +296,22 @@ body {
   box-shadow: var(--shadow);
 }
 
+.sprout-two-column-card {
+  width: 100%;
+  max-width: 76rem; /* 1216px */
+  height: auto;
+  border-radius: var(--spt-radius-9); /* 32px */
+  border: 0.8px solid var(--spt-neutral-850);
+  background: var(--spt-neutral-900);
+  box-shadow: var(--shadow);
+}
+
+@media (min-width: 768px) {
+  .sprout-two-column-card {
+    height: 44.8125rem; /* 717px on desktop */
+  }
+}
+
 .sprout-shadow-sm {
   box-shadow: 0 2px 8px rgba(15, 23, 42, 0.08);
 }
