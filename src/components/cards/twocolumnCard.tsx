@@ -43,8 +43,12 @@ const TwoColumnCard = ({
           src={image}
           alt={title}
           fill
-          sizes="(min-width: 768px) 50vw, 100vw"
+          priority
+          quality={100}
+          unoptimized
+          sizes="(min-width: 768px) 487px, 100vw"
           className="object-cover transition-transform duration-500 hover:scale-105"
+          style={{ objectPosition: 'center' }}
         />
       </div>
 
