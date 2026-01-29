@@ -3,7 +3,7 @@ import { Metadata } from 'next'
 import { NextIntlClientProvider } from 'next-intl'
 import { getLocale, getMessages } from 'next-intl/server'
 import { Prompt } from 'next/font/google'
-
+import { Footer } from '@/components/layout/footer'
 import './styles.css'
 import { Navbar } from '@/components/layout/navigation'
 import { OrbBackground } from '@/components/layout/background'
@@ -44,6 +44,7 @@ export default async function RootLayout(props: { children: ReactNode }) {
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Navbar />
           <main className="min-h-screen">{children}</main>
+          <Footer />
         </NextIntlClientProvider>
       </body>
     </html>
