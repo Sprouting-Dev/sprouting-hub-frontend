@@ -22,5 +22,37 @@
     "title": "Innovate with",
     "subtitle": "Confidence",
     "description": "Explore our premium services designed to elevate your business. From intelligent automation to robust software ecosystems."
+  },
+  "coreExpertise": {
+    "title": "Core Expertise",
+    "description": "Specialized solutions for modern challenges",
+    "aiCard": {
+      "title": "AI & Workflow Automation",
+      "detail": "Reengineer your operational framework through intelligent, end-to-end automation. We leverage enterprise-grade orchestration platforms specifically Make and n8n to integrate disparate business applications into a unified, high-performance ecosystem. Our mission is to transform labor-intensive manual processes into resilient, autonomous workflows that drive peak efficiency.",
+      "button": "Explore AI Automation",
+      "list": {
+        "item1": "Discovery & Strategic Analysis",
+        "item2": "Architectural Design",
+        "item3": "Seamless System Integration",
+        "item4": "Validation & Quality Assurance",
+        "item5": "Adaptive Monitoring"
+      }
+    },
+    "devCard": {
+      "title": "Software Development",
+      "detail": "We engineer bespoke, high-performance digital solutions designed to solve complex enterprise challenges. Our full-stack development team delivers secure, scalable, and user-centric systems that serve as the technological backbone for your long-term commercial success and operational excellence.",
+      "button": "Explore Software Development",
+      "list": {
+        "item1": {
+          "title": "Advanced Technology Stack",
+          "description": "Expert in Next.js, React, TypeScript, and Supabase."
+        },
+        "item2": "Requirement Engineering",
+        "item3": "UX/UI Strategy",
+        "item4": "Agile Execution",
+        "item5": "Security & QA",
+        "item6": "Deployment & Lifecycle Management"
+      }
+    }
   }
 }
