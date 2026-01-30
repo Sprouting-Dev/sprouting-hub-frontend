@@ -3,7 +3,7 @@
 import React from 'react'
 import { useTranslations } from 'next-intl'
 import { useRouter } from 'next/navigation'
-import { Badge, Button } from '@/components/commons/'
+import { Badge, Button, Title } from '@/components/commons/'
 import {
   FeatureCard,
   ServiceCard,
@@ -46,10 +46,7 @@ export default function HomePage() {
         </div>
       </div>
 
-      <div className="flex flex-col items-center gap-3">
-        <h3 className="text-4xl text-spt-primary-500 text-center">Value Proposition</h3>
-        <div className="h-1 w-25 bg-gradient-to-r from-spt-secondary-400 to-spt-primary-400 rounded-full" />
-      </div>
+      <Title title="Value Proposition" />
 
       {/* Feature Card */}
       <div className="flex flex-col items-center gap-3">
@@ -77,10 +74,7 @@ export default function HomePage() {
         </div>
       </div>
 
-      <div className="flex flex-col items-center gap-3">
-        <h3 className="text-4xl text-spt-primary-500 text-center">Our Core Services</h3>
-        <div className="h-1 w-25 bg-gradient-to-r from-spt-secondary-400 to-spt-primary-400 rounded-full" />
-      </div>
+      <Title title="Our Core Services" />
 
       {/* Service Cards */}
       <div className="flex justify-center items-center p-10">
@@ -168,9 +162,7 @@ export default function HomePage() {
         <Badge icon={<CodeIcon />} text={t('badges.typescript')} />
       </div>
 
-      <div className="flex flex-col items-center gap-3">
-        <h3 className="text-4xl text-spt-primary-500 text-center">{t('testimonials.title')}</h3>
-      </div>
+      <Title title={t('testimonials.title')} underline={false} />
 
       {/* Testimonial Cards */}
       <div className="flex justify-center items-center px-10 pb-10">

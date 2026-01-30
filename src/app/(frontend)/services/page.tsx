@@ -1,7 +1,7 @@
 'use client'
 
 import { useTranslations } from 'next-intl'
-import { Process } from '@/components/commons/'
+import { Process, Title } from '@/components/commons/'
 import { HeroBanner } from '@/components/hero'
 
 export default function ServicesPage() {
@@ -20,7 +20,7 @@ export default function ServicesPage() {
 
       <div className="flex justify-center items-center p-10">
         <div className="max-w-6xl w-full">
-          <h3 className="text-[2.5rem] text-center text-spt-primary-500 mb-3">Our Methodology</h3>
+          <Title title="Our Methodology" className="text-[2.5rem] mb-3" underline={false} />
           <p className="text-lg font-base text-center text-spt-neutral-800 mb-15">
             A streamlined journey from concept to reality.
           </p>

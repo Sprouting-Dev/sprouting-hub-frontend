@@ -12,6 +12,27 @@ import { useTranslations } from 'next-intl'
 export const Address = () => {
   const t = useTranslations('Contact')
 
+  const contactList = [
+    {
+      id: 'address',
+      icon: '/icons/Address.png',
+      label: t('company.address'),
+      value: '60 Paya Lebar Rd, #06-28 Paya Lebar Square, Singapore 409051',
+    },
+    {
+      id: 'email',
+      icon: '/icons/Email.png',
+      label: t('company.email'),
+      value: 'info@sproutingtechhub.com',
+    },
+    {
+      id: 'tel',
+      icon: '/icons/Tel.png',
+      label: t('company.tel'),
+      value: '+66 61-024-5495',
+    },
+  ]
+
   const SocialIcon = ({
     src,
     alt,
@@ -30,33 +51,17 @@ export const Address = () => {
   )
 
   return (
-    <div className="w-full max-w-7xl min-h-[756px] mx-auto bg-white border rounded-3xl p-8">
+    <div className="w-full max-w-5xl min-h-[756px] mx-auto bg-white border rounded-3xl p-8">
       <div className="flex flex-col gap-6 mb-8">
-        <div className="flex items-start gap-4">
-          <Image src="/icons/Address.png" alt="Address" width={20} height={20} />
-          <p className="font-medium text-base text-spt-primary-400">
-            {t('company.address')}
-            <span className="font-normal text-spt-neutral-1000">
-              : 60 Paya Lebar Rd, #06-28 Paya Lebar Square, Singapore 409051
-            </span>
-          </p>
-        </div>
-
-        <div className="flex items-center gap-4">
-          <Image src="/icons/Email.png" alt="Email" width={20} height={20} />
-          <p className="font-medium text-base text-spt-primary-400">
-            {t('company.email')}
-            <span className="font-normal text-spt-neutral-1000">: info@sproutingtechhub.com</span>
-          </p>
-        </div>
-
-        <div className="flex items-center gap-4">
-          <Image src="/icons/Tel.png" alt="Tel" width={20} height={20} />
-          <p className="font-medium text-base text-spt-primary-400">
-            {t('company.tel')}
-            <span className="font-normal text-spt-neutral-1000">: +66 61-024-5495</span>
-          </p>
-        </div>
+        {contactList.map((item) => (
+          <div key={item.id} className="flex items-start gap-4">
+            <Image src={item.icon} alt={item.label} width={20} height={20} />
+            <p className="font-medium text-base text-spt-primary-400">
+              {item.label}
+              <span className="font-normal text-spt-neutral-1000">{`: ${item.value}`}</span>
+            </p>
+          </div>
+        ))}
       </div>
 
       <div className="flex justify-center items-center gap-4 mb-8">

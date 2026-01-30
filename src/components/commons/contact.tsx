@@ -77,7 +77,7 @@ export const Contact: React.FC<ContactProps> = ({ onSubmit }) => {
   }
 
   return (
-    <div className="w-full max-w-7xl mx-auto bg-white border rounded-3xl p-6">
+    <div className="w-full max-w-5xl mx-auto bg-white border rounded-3xl p-6">
       <form onSubmit={handleSubmit} className="flex flex-col gap-4">
         <div className="flex flex-col gap-1">
           <input
