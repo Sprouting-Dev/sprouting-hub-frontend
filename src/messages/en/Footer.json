@@ -1,0 +1,39 @@
+{
+  "footer": {
+    "brand": {
+      "tagline": "Empowering businesses through intelligent automation and premier software development."
+    },
+    "quickLinks": {
+      "title": "Quick Links",
+      "home": "Home",
+      "services": "Services",
+      "products": "Products",
+      "about": "About",
+      "careers": "Careers"
+    },
+    "services": {
+      "title": "Services",
+      "aiAutomation": "AI Automation",
+      "webDevelopment": "Web Development",
+      "mobileApps": "Mobile Apps",
+      "cloudSolutions": "Cloud Solutions",
+      "itConsulting": "IT Consulting"
+    },
+    "contact": {
+      "title": "Contact",
+      "address": "123 Sprouting St, Bangkok, Thailand",
+      "email": "info@sproutingtech.com",
+      "phone": "+66 2 123 4567"
+    },
+    "legal": {
+      "privacyPolicy": "Privacy Policy",
+      "termsOfService": "Terms of Service",
+      "copyright": "© 2026 Sprouting Tech. All rights reserved."
+    },
+    "languageSwitch": {
+      "label": "Language",
+      "en": "EN",
+      "th": "TH"
+    }
+  }
+}
