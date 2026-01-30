@@ -53,10 +53,7 @@ export const Footer = () => {
       <ul className="space-y-2">
         {links.map((link) => (
           <li key={link.label}>
-            <Link
-              href={link.href}
-              className="text-spt-neutral-500 hover:text-spt-primary-400 text-sm transition-colors"
-            >
+            <Link href={link.href} className="text-hover">
               {link.label}
             </Link>
           </li>
@@ -125,19 +122,13 @@ export const Footer = () => {
               </div>
               <div className="flex items-center">
                 <Mail className="text-spt-secondary-400 mr-3 flex-shrink-0" size={16} />
-                <a
-                  href={`mailto:${contactInfo.email}`}
-                  className="text-spt-neutral-500 hover:text-spt-text-primary-400 text-sm transition-colors"
-                >
+                <a href={`mailto:${contactInfo.email}`} className="text-hover">
                   {contactInfo.email}
                 </a>
               </div>
               <div className="flex items-center">
                 <Phone className="text-spt-secondary-400 mr-3 flex-shrink-0" size={16} />
-                <a
-                  href={`tel:${contactInfo.phone}`}
-                  className="text-spt-neutral-500 hover:text-spt-text-primary-400 text-sm transition-colors"
-                >
+                <a href={`tel:${contactInfo.phone}`} className="text-hover">
                   {contactInfo.phone}
                 </a>
               </div>
@@ -150,11 +141,7 @@ export const Footer = () => {
           <div>{t('footer.legal.copyright')}</div>
           <div className="flex gap-6 mt-4 md:mt-0">
             {legalLinks.map((link) => (
-              <Link
-                key={link.label}
-                href={link.href}
-                className="text-spt-neutral-800 hover:text-spt-text-primary-400 transition-colors"
-              >
+              <Link key={link.label} href={link.href} className="text-hover">
                 {link.label}
               </Link>
             ))}
