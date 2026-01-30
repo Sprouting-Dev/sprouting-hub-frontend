@@ -344,6 +344,9 @@ body {
   background: linear-gradient(180deg, rgba(19, 180, 153, 0) 0%, var(--spt-primary-400) 136.92%);
 }
 
+.text-hover {
+  @apply text-spt-neutral-500 hover:text-spt-primary-400 text-sm transition-colors;
+}
 @layer base {
   h1 {
     @apply font-bold text-[3.5rem] leading-21;
