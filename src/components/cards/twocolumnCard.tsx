@@ -1,5 +1,5 @@
 import { cn } from '../../util/cn'
-import { SquareArrowOutUpRight } from 'lucide-react'
+import { SquareArrowOutUpRight, Check } from 'lucide-react'
 import Image from 'next/image'
 import { ReactNode } from 'react'
 
@@ -10,10 +10,17 @@ interface ButtonConfig {
   className?: string
 }
 
+interface ListItem {
+  title: string
+  description?: string
+}
+
 interface TwoColumnCardProps {
   image: string
   title: string
+  titleIcon?: ReactNode
   detail: string
+  listItems?: (string | ListItem)[]
   tag?: string
   button?: ButtonConfig
   className?: string
@@ -23,7 +30,9 @@ interface TwoColumnCardProps {
 const TwoColumnCard = ({
   image,
   title,
+  titleIcon,
   detail,
+  listItems,
   tag,
   button,
   className,
@@ -32,8 +41,10 @@ const TwoColumnCard = ({
   return (
     <div
       className={cn(
-        'sprout-two-column-card flex flex-col md:flex-row overflow-hidden transition-all duration-300',
-        imagePosition === 'right' && 'md:flex-row-reverse',
+        'sprout-two-column-card',
+        imagePosition === 'right' ? 'sprout-two-column-card-right' : 'sprout-two-column-card-left',
+        'flex-col md:!flex-row',
+        imagePosition === 'right' && 'md:!flex-row-reverse',
         className,
       )}
     >
@@ -53,7 +64,7 @@ const TwoColumnCard = ({
       </div>
 
       {/* Content Section */}
-      <div className="flex-1 flex flex-col justify-center gap-4 p-8 md:p-12">
+      <div className="flex-1 flex flex-col justify-center gap-8 p-8 md:p-12">
         {tag && (
           <div className="inline-flex">
             <span className="text-spt-secondary-400 text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full border border-spt-secondary-400/30 bg-spt-secondary-400/10">
@@ -62,28 +73,50 @@ const TwoColumnCard = ({
           </div>
         )}
 
-        <h3 className="text-surface text-3xl md:text-4xl font-bold leading-tight">{title}</h3>
+        <div className="flex items-center gap-3">
+          {titleIcon && <div className="shrink-0">{titleIcon}</div>}
+          <h3 className="two-column-card-title">{title}</h3>
+        </div>
 
-        <p className="text-spt-neutral-150 text-base md:text-lg leading-relaxed">{detail}</p>
+        <p className="two-column-card-description pb-4">{detail}</p>
+
+        {listItems && listItems.length > 0 && (
+          <ul className="two-column-card-list pb-6">
+            {listItems.map((item, index) => (
+              <li key={index} className="flex items-start gap-3">
+                <div className="two-column-card-list-icon shrink-0 w-6 h-6 flex items-center justify-center">
+                  <Check className="w-4 h-4" strokeWidth={3} />
+                </div>
+                <div className="flex flex-col">
+                  {typeof item === 'string' ? (
+                    <span className="two-column-card-list-item">{item}</span>
+                  ) : (
+                    <>
+                      <span className="two-column-card-list-item">{item.title}</span>
+                      {item.description && (
+                        <span className="two-column-card-list-description">{item.description}</span>
+                      )}
+                    </>
+                  )}
+                </div>
+              </li>
+            ))}
+          </ul>
+        )}
 
         {button && (
-          <div className="mt-4">
-            <button
-              onClick={button.onClick}
-              className={cn(
-                'group flex items-center justify-center gap-3 px-8 py-3 border-2 rounded-full bg-transparent transition-all duration-300 hover:scale-105 active:scale-95 font-semibold border-spt-secondary-400 text-spt-secondary-400 hover:bg-spt-secondary-400 hover:text-white',
-                button.className,
-              )}
-            >
-              {button.title}
-              {button.icon || (
-                <SquareArrowOutUpRight
-                  size={20}
-                  className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
-                />
-              )}
-            </button>
-          </div>
+          <button
+            onClick={button.onClick}
+            className={cn('two-column-card-button', button.className)}
+          >
+            {button.title}
+            {button.icon || (
+              <SquareArrowOutUpRight
+                size={20}
+                className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
+              />
+            )}
+          </button>
         )}
       </div>
     </div>
