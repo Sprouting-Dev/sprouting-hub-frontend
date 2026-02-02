@@ -45,8 +45,8 @@ export default function AboutPage() {
       <Title title={t('avatar.title')} className="text-[2.5rem]" />
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-items-center max-w-6xl mx-auto gap-16 pb-20 px-8">
-        {teamMembers.map((member, index) => (
-          <Avatar key={index} name={member.name} role={member.role} src={member.image} />
+        {teamMembers.map((member) => (
+          <Avatar key={member.name} name={member.name} role={member.role} src={member.image} />
         ))}
       </div>
     </div>
