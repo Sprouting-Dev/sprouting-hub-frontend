@@ -58,8 +58,7 @@ const TwoColumnCard = ({
           quality={100}
           unoptimized
           sizes="(min-width: 768px) 487px, 100vw"
-          className="object-cover transition-transform duration-500 hover:scale-105"
-          style={{ objectPosition: 'center' }}
+          className="object-cover object-center transition-transform duration-500 hover:scale-105"
         />
       </div>
 
@@ -82,8 +81,8 @@ const TwoColumnCard = ({
 
         {listItems && listItems.length > 0 && (
           <ul className="two-column-card-list pb-6">
-            {listItems.map((item, index) => (
-              <li key={index} className="flex items-start gap-3">
+            {listItems.map((item) => (
+              <li key={crypto.randomUUID()} className="flex items-start gap-3">
                 <div className="two-column-card-list-icon shrink-0 w-6 h-6 flex items-center justify-center">
                   <Check className="w-4 h-4" strokeWidth={3} />
                 </div>

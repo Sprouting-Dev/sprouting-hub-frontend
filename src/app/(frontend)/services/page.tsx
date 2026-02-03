@@ -21,9 +21,13 @@ export default function ServicesPage() {
 
       {/* Two Column Card Section */}
       <div className="flex flex-col justify-center items-center w-full px-4 py-8 md:py-16 gap-8">
-        <div className="core-expertise-container mb-8">
-          <h2 className="core-expertise-title">{t('coreExpertise.title')}</h2>
-          <p className="core-expertise-description">{t('coreExpertise.description')}</p>
+        <div className="flex flex-col items-center gap-4 max-w-232 mx-auto text-center mb-8">
+          <h2 className="font-prompt font-bold text-[2.5rem] leading-15 text-spt-primary-500">
+            {t('coreExpertise.title')}
+          </h2>
+          <p className="font-sans font-normal text-lg leading-[1.688rem] text-[#666666]">
+            {t('coreExpertise.description')}
+          </p>
         </div>
         <TwoColumnCard
           image="/images/AI & Workflow Automation.png"

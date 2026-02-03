@@ -386,36 +386,6 @@ body {
   @apply text-spt-neutral-500 hover:text-spt-primary-400 text-sm transition-colors;
 }
 
-/* Core Expertise Typography */
-.core-expertise-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px;
-  max-width: 928px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-}
-
-.core-expertise-title {
-  font-family: var(--font-prompt);
-  font-weight: 700;
-  font-size: 40px;
-  line-height: 60px;
-  letter-spacing: 0px;
-  color: var(--spt-primary-500);
-}
-
-.core-expertise-description {
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 27px;
-  letter-spacing: 0px;
-  color: #666666;
-}
-
 /* Two Column Card Typography */
 .two-column-card-title {
   font-family: var(--font-prompt);
