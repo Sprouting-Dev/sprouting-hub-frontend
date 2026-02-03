@@ -48,7 +48,7 @@ export default function ServicesPage() {
           imagePosition="left"
           button={{
             title: t('coreExpertise.aiCard.button'),
-            onClick: () => (window.location.href = '/#'),
+            onClick: () => (window.location.href = '/services/ai-automation'),
             icon: <ArrowRight size={20} />,
           }}
         />

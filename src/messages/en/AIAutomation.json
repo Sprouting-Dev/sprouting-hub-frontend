@@ -1,0 +1,72 @@
+{
+  "title": "AI Automation & Workflow Management",
+  "serviceCard": {
+    "title": "AI Automation & Workflow Management",
+    "detail": "Reimagine your operations with end-to-end intelligent automation. We leverage enterprise-grade platforms like Make and n8n to connect disparate business applications into a single, high-performance ecosystem. Our mission is to transform labor-intensive manual processes into flexible automated workflows that drive maximum organizational efficiency."
+  },
+  "process": {
+    "title": "Our Work Process",
+    "steps": {
+      "0": {
+        "title": "Discovery & Strategic Analysis",
+        "detail": "In-depth examination of current workflows to identify areas where automation will yield the highest results."
+      },
+      "1": {
+        "title": "Architectural Design",
+        "detail": "Engineering systematic automation structures that are scalable and error-resilient, designed specifically to align with your business logic."
+      },
+      "2": {
+        "title": "Seamless System Integration",
+        "detail": "Precise connection of APIs and various platforms to ensure secure and consistent data flow."
+      },
+      "3": {
+        "title": "Validation & Quality Assurance",
+        "detail": "Rigorous system testing under all conditions and logic to guarantee maximum stability for critical tasks."
+      },
+      "4": {
+        "title": "Adaptive Monitoring",
+        "detail": "Proactive performance monitoring and continuous system improvement to maintain long-term operational excellence."
+      }
+    }
+  },
+  "useCases": {
+    "title": "Real-World Use Cases",
+    "items": {
+      "0": {
+        "title": "Automated CRM",
+        "detail": "Real-time customer data synchronization between sales and marketing teams."
+      },
+      "1": {
+        "title": "Smart Notifications",
+        "detail": "Connect LINE OA and Slack for instant alerts and business insights."
+      },
+      "2": {
+        "title": "Data Orchestration",
+        "detail": "Automating complex reporting and cross-platform database management entirely."
+      }
+    }
+  },
+  "businessValue": {
+    "title": "Business Value You Will Receive",
+    "items": {
+      "0": {
+        "title": "Operational Agility",
+        "detail": "Drastically reduce manual workload, giving your team time to focus on strategic growth."
+      },
+      "1": {
+        "title": "Data Integrity",
+        "detail": "Eliminate human error to ensure 100% data processing accuracy."
+      },
+      "2": {
+        "title": "Seamless Scalability",
+        "detail": "Multiply operational capacity without the need to increase headcount."
+      }
+    }
+  },
+  "ctaFooter": {
+    "title": "Ready to Transform Your Business?",
+    "description": "Start your digital transformation journey with us - Free consultation.",
+    "button": "Contact Us",
+    "subDescription": "No cost, no obligation"
+  }
+}

@@ -353,6 +353,34 @@ body {
   box-shadow: var(--shadow);
 }
 
+/* Service Card Large */
+.sprout-service-card-large {
+  width: 100%;
+  max-width: 76rem; /* 1216px */
+  height: auto;
+  border-radius: 2rem; /* 32px */
+  border: 0.8px solid #0000000d;
+  box-shadow: var(--spt-card-shadow);
+  overflow: hidden;
+  background: white;
+}
+
+.sprout-service-card-large-image {
+  width: 100%;
+  height: 27.813rem; /* 445px */
+  position: relative;
+}
+
+.sprout-service-card-large-content {
+  width: 100%;
+  height: auto;
+  min-height: 20.813rem; /* 333px */
+  padding: 4rem; /* 64px */
+  display: flex;
+  flex-direction: column;
+  gap: 2.313rem; /* 37px */
+}
+
 /* CTA Footer Description - Control line breaks */
 .cta-footer-description {
   max-width: 28rem;

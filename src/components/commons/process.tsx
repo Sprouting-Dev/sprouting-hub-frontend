@@ -2,8 +2,8 @@ import React from 'react'
 import { cn } from '../../util/cn'
 
 interface ProcessStep {
-  title: string
-  detail: string
+  title: React.ReactNode
+  detail: React.ReactNode
 }
 
 interface ProcessProps {
@@ -29,18 +29,23 @@ export const Process: React.FC<ProcessProps> = ({ steps, className }) => {
 
         <div className="grid grid-cols-1 md:grid-flow-col md:auto-cols-fr gap-10 md:gap-4 relative z-10">
           {steps.map((step, index) => (
-            <div key={index} className="flex flex-col items-center text-center group px-2">
+            <div
+              key={`step-${index}`}
+              className="flex flex-col items-center text-center group px-1"
+            >
               <div className="relative mb-3">
                 <div className="w-20 h-20 rounded-full bg-gradient-to-b from-spt-primary-400 to-spt-secondary-400 shadow-lg shadow-teal-900/20 border-4 border-white flex items-center justify-center">
                   <span className="text-white text-[2rem] font-bold font-prompt">{index + 1}</span>
                 </div>
               </div>
 
-              <h3 className="text-xl font-bold text-spt-neutral-1000 flex items-end justify-center">
+              <h3 className="text-lg md:text-xl font-bold text-spt-neutral-1000 mb-2 min-h-[3.25rem] leading-tight flex flex-col justify-start items-center text-balance w-full">
                 {step.title}
               </h3>
 
-              <p className="text-sm text-spt-neutral-800 w-3xs mx-auto">{step.detail}</p>
+              <div className="text-sm text-spt-neutral-800 w-full px-1 leading-relaxed text-pretty">
+                {step.detail}
+              </div>
             </div>
           ))}
         </div>

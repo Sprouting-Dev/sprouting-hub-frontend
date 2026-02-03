@@ -4,13 +4,47 @@ import { ArrowRight } from 'lucide-react'
 
 interface ServiceCardProps {
   image: string
-  icon: React.ReactNode
+  icon?: React.ReactNode
+  titleIcon?: React.ReactNode
   title: string
   detail: string
   className?: string
+  variant?: 'default' | 'large'
 }
 
-export const ServiceCard = ({ image, icon, title, detail, className }: ServiceCardProps) => {
+export const ServiceCard = ({
+  image,
+  icon,
+  titleIcon,
+  title,
+  detail,
+  className,
+  variant = 'default',
+}: ServiceCardProps) => {
+  if (variant === 'large') {
+    return (
+      <div className={cn('sprout-service-card-large', className)}>
+        <div className="sprout-service-card-large-image">
+          <Image
+            src={image}
+            alt={title}
+            fill
+            sizes="(min-width: 768px) 1216px, 100vw"
+            className="object-cover"
+          />
+        </div>
+
+        <div className="sprout-service-card-large-content">
+          <div className="flex items-center gap-3">
+            {titleIcon && <div className="shrink-0">{titleIcon}</div>}
+            <h3 className="text-4xl font-bold text-spt-primary-400">{title}</h3>
+          </div>
+          <p className="text-lg text-spt-neutral-800 leading-relaxed">{detail}</p>
+        </div>
+      </div>
+    )
+  }
+
   return (
     <div
       className={cn(
