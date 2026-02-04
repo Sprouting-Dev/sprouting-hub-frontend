@@ -4,6 +4,7 @@ import { NextIntlClientProvider } from 'next-intl'
 import { getLocale, getMessages } from 'next-intl/server'
 import { Prompt } from 'next/font/google'
 import { Footer } from '@/components/layout/footer'
+import { ConditionalCTAFooter } from '@/components/footer/conditionalCTAFooter'
 import './styles.css'
 import { Navbar } from '@/components/layout/navigation'
 import { OrbBackground } from '@/components/layout/background'
@@ -31,7 +32,7 @@ export const metadata: Metadata = {
   },
 }
 
-export default async function RootLayout(props: { children: ReactNode }) {
+export default async function FrontendLayout(props: { children: ReactNode }) {
   const { children } = props
   const locale = await getLocale()
   const messages = await getMessages()
@@ -44,6 +45,7 @@ export default async function RootLayout(props: { children: ReactNode }) {
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Navbar />
           <main className="min-h-screen">{children}</main>
+          <ConditionalCTAFooter />
           <Footer />
         </NextIntlClientProvider>
       </body>

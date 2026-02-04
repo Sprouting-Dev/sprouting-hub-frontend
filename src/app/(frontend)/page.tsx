@@ -11,7 +11,6 @@ import {
   HorizonCard,
   SmallCard,
 } from '@/components/cards'
-import { CTAFooter } from '@/components/footer/ctaFooter'
 import { Sparkles, CodeIcon, Database, Cpu, Globe, CheckCircle, Bot, Monitor } from 'lucide-react'
 
 import './styles.css'
@@ -187,18 +186,6 @@ export default function HomePage() {
           />
         </div>
       </div>
-
-      {/* CTA Footer */}
-      <CTAFooter
-        title={t('ctaFooter.title')}
-        description={t('ctaFooter.description')}
-        button={{
-          label: t('ctaFooter.button'),
-          onClick: () => router.push('/contact'),
-        }}
-        subDescription={t('ctaFooter.subDescription')}
-        className="my-10"
-      />
     </div>
   )
 }
