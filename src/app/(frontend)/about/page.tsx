@@ -2,7 +2,8 @@
 
 import React from 'react'
 import { useTranslations } from 'next-intl'
-import { Avatar, Title } from '@/components/commons'
+import { FeatureCard } from '@/components/cards'
+import { Avatar, Mission, Title } from '@/components/commons'
 import { HeroBanner } from '@/components/hero'
 
 export default function AboutPage() {
@@ -42,7 +43,45 @@ export default function AboutPage() {
         backgroundImage="/images/Hero BG About Page.jpg"
       />
 
-      <Title title={t('avatar.title')} className="text-[2.5rem]" />
+      <Mission />
+
+      <Title title={t('feature.title')} className="text-[2.5rem]" underline={false} />
+      <p className="text-lg font-base text-center text-spt-neutral-800">{t('feature.detail')}</p>
+
+      {/* Feature Card */}
+      <div className="flex flex-col items-center gap-3">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 p-10 max-w-4xl">
+          <FeatureCard
+            image="/icons/Innovation.png"
+            title={t('feature.innovation.title')}
+            detail={t('feature.innovation.detail')}
+            align="left"
+            iconclassName="bg-spt-primary-10/10"
+            titleclassName="text-spt-neutral-1000"
+            detailclassName="textspt-neutral-600"
+          />
+          <FeatureCard
+            image="/icons/Partnership.png"
+            title={t('feature.client.title')}
+            detail={t('feature.client.detail')}
+            align="left"
+            iconclassName="bg-spt-primary-10/10"
+            titleclassName="text-spt-neutral-1000"
+            detailclassName="textspt-neutral-600"
+          />
+          <FeatureCard
+            image="/icons/Agile.png"
+            title={t('feature.agile.title')}
+            detail={t('feature.agile.detail')}
+            align="left"
+            iconclassName="bg-spt-primary-10/10"
+            titleclassName="text-spt-neutral-1000"
+            detailclassName="textspt-neutral-600"
+          />
+        </div>
+      </div>
+
+      <Title title={t('avatar.title')} className="text-[2.5rem] mt-15" />
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-items-center max-w-6xl mx-auto gap-16 pb-20 px-8">
         {teamMembers.map((member) => (
