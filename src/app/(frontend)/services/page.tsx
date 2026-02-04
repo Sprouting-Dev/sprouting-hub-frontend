@@ -2,11 +2,13 @@
 import { TwoColumnCard } from '@/components/cards'
 import { Bot, ArrowRight, Monitor } from 'lucide-react'
 import { useTranslations } from 'next-intl'
+import { useRouter } from 'next/navigation'
 import { Process, Title } from '@/components/commons/'
 import { HeroBanner } from '@/components/hero'
 
 export default function ServicesPage() {
   const t = useTranslations('Service')
+  const router = useRouter()
 
   return (
     <div className="flex flex-col">
@@ -48,7 +50,7 @@ export default function ServicesPage() {
           imagePosition="left"
           button={{
             title: t('coreExpertise.aiCard.button'),
-            onClick: () => (window.location.href = '/services/ai-automation'),
+            onClick: () => router.push('/services/ai-automation'),
             icon: <ArrowRight size={20} />,
           }}
         />
@@ -72,7 +74,7 @@ export default function ServicesPage() {
           imagePosition="right"
           button={{
             title: t('coreExpertise.devCard.button'),
-            onClick: () => (window.location.href = '/#'),
+            onClick: () => router.push('/#'),
             icon: <ArrowRight size={20} />,
           }}
         />
