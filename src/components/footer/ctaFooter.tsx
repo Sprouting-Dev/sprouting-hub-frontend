@@ -1,26 +1,17 @@
+'use client'
+
+import { useTranslations } from 'next-intl'
+import { useRouter } from 'next/navigation'
 import { Button } from '@/components/commons/button'
 
-interface CTAFooterButton {
-  label: string
-  onClick?: () => void
-  href?: string
-}
-
 interface CTAFooterProps {
-  title: string
-  description: string
-  button: CTAFooterButton
-  subDescription?: string
   className?: string
 }
 
-export const CTAFooter = ({
-  title,
-  description,
-  button,
-  subDescription,
-  className = '',
-}: CTAFooterProps) => {
+export const CTAFooter = ({ className = '' }: CTAFooterProps) => {
+  const t = useTranslations('CTA')
+  const router = useRouter()
+
   return (
     <section
       className={`
@@ -43,39 +34,25 @@ export const CTAFooter = ({
           {/* Text */}
           <div className="text-left w-full max-w-md md:max-w-2xl flex flex-col justify-center gap-3  font-prompt ">
             <h2 className="text-white font-bold drop-shadow-sm text-3xl md:text-5xl leading-[135%] md:leading-tight tracking-normal">
-              {title}
+              {t('title')}
             </h2>
             <p className="pr-8 cta-footer-description font-normal text-lg leading-7 tracking-normal text-white/90">
-              {description}
+              {t('description')}
             </p>
           </div>
           {/* Button */}
           <div className="flex flex-col items-center w-full md:w-auto gap-3">
-            {button.href ? (
-              <a href={button.href} className="w-full md:w-auto">
-                <Button
-                  label={button.label}
-                  size="xl"
-                  variant="rounded"
-                  className="bg-white text-spt-primary-400 hover:bg-white/95 hover:text-spt-primary-500 font-bold w-full md:min-w-60 h-15 transition-all duration-300 hover:scale-105 active:scale-95 rounded-[var(--spt-radius-7)] shadow-[var(--spt-cta-button-shadow)]"
-                  onClick={button.onClick}
-                />
-              </a>
-            ) : (
-              <Button
-                label={button.label}
-                size="xl"
-                variant="rounded"
-                className="bg-white text-spt-primary-400 hover:bg-white/95 hover:text-spt-primary-500 font-bold w-full md:min-w-60 h-15 transition-all duration-300 hover:scale-105 active:scale-95 rounded-[var(--spt-radius-7)] shadow-[var(--spt-cta-button-shadow)]"
-                onClick={button.onClick}
-              />
-            )}
+            <Button
+              label={t('button')}
+              size="xl"
+              variant="rounded"
+              className="bg-white text-spt-primary-400 hover:bg-white/95 hover:text-spt-primary-500 font-bold w-full md:min-w-60 h-15 transition-all duration-300 hover:scale-105 active:scale-95 rounded-[var(--spt-radius-7)] shadow-[var(--spt-cta-button-shadow)]"
+              onClick={() => router.push('/contact')}
+            />
 
-            {subDescription && (
-              <p className="text-white/80 text-sm font-light tracking-wide drop-shadow-sm text-center w-full md:w-60">
-                {subDescription}
-              </p>
-            )}
+            <p className="text-white/80 text-sm font-light tracking-wide drop-shadow-sm text-center w-full md:w-60">
+              {t('subDescription')}
+            </p>
           </div>
         </div>
       </div>

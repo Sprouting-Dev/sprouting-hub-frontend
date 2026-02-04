@@ -2,17 +2,13 @@
 
 import React from 'react'
 import { useTranslations } from 'next-intl'
-import { useRouter } from 'next/navigation'
 import { Title } from '@/components/commons/'
 import { ServiceCard } from '@/components/cards'
 import { Process } from '@/components/commons/process'
-import { CTAFooter } from '@/components/footer/ctaFooter'
 import { Bot } from 'lucide-react'
 
 export default function AIAutomationPage() {
   const t = useTranslations('AIAutomation')
-  const tHome = useTranslations('Home')
-  const router = useRouter()
 
   return (
     <div className="flex flex-col">
@@ -97,16 +93,6 @@ export default function AIAutomationPage() {
           </div>
         </div>
       </div>
-      {/* CTA Footer */}
-      <CTAFooter
-        title={tHome('ctaFooter.title')}
-        description={tHome('ctaFooter.description')}
-        button={{
-          label: tHome('ctaFooter.button'),
-          onClick: () => router.push('/contact'),
-        }}
-        subDescription={tHome('ctaFooter.subDescription')}
-      />
     </div>
   )
 }

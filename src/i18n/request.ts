@@ -44,6 +44,7 @@ export default getRequestConfig(async () => {
     'Contact',
     'Footer',
     'AIAutomation',
+    'CTA',
   ] as const
   const messages = Object.fromEntries(
     await Promise.all(
