@@ -10,7 +10,7 @@ const SmallCard = ({ value, label, className }: SmallCardProps) => {
   return (
     <div
       className={cn(
-        'flex flex-col items-center justify-center gap-2 sprout-card pb-6 pt-6 pr-15 pl-15',
+        'flex flex-col items-center justify-center min-w-2xs sprout-card py-6 px-10',
         className,
       )}
     >

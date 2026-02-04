@@ -94,7 +94,7 @@ export default function HomePage() {
       </div>
 
       {/* Horizon Cards */}
-      <div className="flex justify-center items-center py-10 px-10 bg-spt-neutral-1000">
+      <div className="flex justify-center items-center py-10 bg-spt-neutral-1000">
         <div className="flex flex-col gap-15 w-full max-w-6xl m-10">
           <div className="flex flex-col text-left">
             <h2 className="text-[2.250rem] text-spt-secondary-400">{t('horizon.title')}</h2>
@@ -109,7 +109,7 @@ export default function HomePage() {
               detail={t('horizon.academy.detail')}
               tag={t('horizon.academy.tag')}
               buttonTitle={t('horizon.academy.buttonTitle')}
-              onClick={() => router.push('/#')}
+              onClick={() => router.push('https://www.sproutingtechacademy.com/')}
             />
             <HorizonCard
               image="/images/wiivor_mockup_banner.png"
@@ -117,15 +117,15 @@ export default function HomePage() {
               detail={t('horizon.wiivor.detail')}
               tag={t('horizon.wiivor.tag')}
               buttonTitle={t('horizon.wiivor.buttonTitle')}
-              onClick={() => router.push('/#')}
+              onClick={() => router.push('https://wiivor.com/')}
             />
           </div>
         </div>
       </div>
 
       {/* Small Cards */}
-      <div className="flex justify-center items-center p-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full mx-40">
+      <div className="flex justify-center items-center py-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 max-w-7xl w-auto gap-6 mx-10">
           <SmallCard
             value={t('statistics.projects.value')}
             label={t('statistics.projects.label')}
