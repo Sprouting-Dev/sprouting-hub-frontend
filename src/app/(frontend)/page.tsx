@@ -110,7 +110,7 @@ export default function HomePage() {
               detail={t('horizon.academy.detail')}
               tag={t('horizon.academy.tag')}
               buttonTitle={t('horizon.academy.buttonTitle')}
-              onClick={() => (window.location.href = '/#')}
+              onClick={() => router.push('/#')}
             />
             <HorizonCard
               image="/images/wiivor_mockup_banner.png"
@@ -118,7 +118,7 @@ export default function HomePage() {
               detail={t('horizon.wiivor.detail')}
               tag={t('horizon.wiivor.tag')}
               buttonTitle={t('horizon.wiivor.buttonTitle')}
-              onClick={() => (window.location.href = '/#')}
+              onClick={() => router.push('/#')}
             />
           </div>
         </div>
@@ -194,7 +194,7 @@ export default function HomePage() {
         description={t('ctaFooter.description')}
         button={{
           label: t('ctaFooter.button'),
-          onClick: () => (window.location.href = '/#'),
+          onClick: () => router.push('/contact'),
         }}
         subDescription={t('ctaFooter.subDescription')}
         className="my-10"
