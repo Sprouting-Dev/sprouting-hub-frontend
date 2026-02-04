@@ -5,6 +5,30 @@
     "subtitle": "Automation",
     "description": "We are a team of innovators dedicated to reshaping businesses through intelligent AI and robust software solutions."
   },
+  "mission": {
+    "subtitle": "Our Mission & Vision",
+    "title": "Empowering Business Through Intelligence",
+    "description1": "At Sprouting Tech, our mission is to empower businesses with intelligent automation and scalable software solutions. We believe in a future where technology handles the heavy lifting, allowing human creativity to flourish.",
+    "description2": "We focus on reducing manual work and increasing efficiency through cutting-edge AI integration and robust full-stack development. Your success is our code.",
+    "autorate": "Automation Rate",
+    "uptime": "System Uptime"
+  },
+  "feature": {
+    "title": "Our Core Values",
+    "detail": "The principles that guide every line of code we write.",
+    "innovation": {
+      "title": "Innovation First",
+      "detail": "We constantly explore emerging AI technologies and frameworks to keep your business ahead of the curve."
+    },
+    "client": {
+      "title": "Client Partnership",
+      "detail": "We don't just build software; we grow with you. Your long-term success is our primary metric."
+    },
+    "agile": {
+      "title": "Agile Speed",
+      "detail": "Rapid iteration and delivery without compromising quality. We adapt quickly to your changing needs."
+    }
+  },
   "avatar": {
     "title": "The Minds Behind the Code"
   }
