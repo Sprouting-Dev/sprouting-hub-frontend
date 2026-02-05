@@ -42,7 +42,7 @@ const HorizonCard = ({
           {tag}
         </a>
         <h3 className="text-surface text-2xl font-bold">{title}</h3>
-        <p className="text-spt-neutral-150 text-base leading-relaxed pr-20">{detail}</p>
+        <p className="text-spt-neutral-150 text-base leading-relaxed">{detail}</p>
         <div className="mt-5">
           <button
             onClick={onClick}
