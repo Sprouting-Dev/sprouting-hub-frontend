@@ -137,6 +137,7 @@ export const Navbar = () => {
               color="primary"
               size="md"
               variant="pill"
+              onClick={() => router.push('/contact')}
             />
           </div>
 
@@ -145,7 +146,7 @@ export const Navbar = () => {
             className="md:hidden flex items-center justify-center focus:outline-none"
           >
             <Image
-              src={isOpen ? menuIcon : menuIcon}
+              src={menuIcon}
               alt="Menu"
               width={18}
               height={12}
@@ -182,7 +183,56 @@ export const Navbar = () => {
           })}
         </div>
 
-        <div className="mt-15 mb-10 flex gap-4">
+        <div className="mt-8 pt-8 border-t border-gray-100 w-full flex flex-col items-center gap-6">
+          <div className="flex items-center gap-2 text-sm font-semibold leading-5 select-none">
+            <Globe className="w-4 h-4 text-spt-secondary-400" />
+            <span
+              onClick={() => {
+                setLocaleCookie('en')
+                closeMenu()
+              }}
+              className={cn(
+                'cursor-pointer transition-colors',
+                locale === 'en'
+                  ? 'text-spt-primary-400'
+                  : 'text-spt-neutral-500 hover:text-spt-primary-400',
+              )}
+            >
+              {t('language.en')}
+            </span>
+
+            <span className="w-[0.5px] h-6 bg-spt-neutral-200 mx-1"></span>
+
+            <span
+              onClick={() => {
+                setLocaleCookie('th')
+                closeMenu()
+              }}
+              className={cn(
+                'cursor-pointer transition-colors',
+                locale === 'th'
+                  ? 'text-spt-primary-400'
+                  : 'text-spt-neutral-500 hover:text-spt-primary-400',
+              )}
+            >
+              {t('language.th')}
+            </span>
+          </div>
+
+          <Button
+            className="h-10"
+            label={t('getStarted')}
+            color="primary"
+            size="md"
+            variant="pill"
+            onClick={() => {
+              router.push('/contact')
+              closeMenu()
+            }}
+          />
+        </div>
+
+        <div className="justify-center mt-8 mb-10 flex gap-4">
           <SocialIcon src={fbIcon} alt="Facebook" href="#" />
           <SocialIcon src={xIcon} alt="Twitter" href="#" />
           <SocialIcon src={liIcon} alt="LinkedIn" href="#" />
