@@ -40,7 +40,7 @@ export default function DevelopmentPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
             {[0, 1, 2].map((index) => (
               <div
-                key={index}
+                key={`usecase-${index}`}
                 className="bg-white rounded-2xl p-8 shadow-md flex flex-col items-center text-center h-full border border-gray-100"
               >
                 <h3 className="text-xl font-bold text-spt-neutral-900 mb-2 leading-tight whitespace-nowrap">
@@ -63,6 +63,7 @@ export default function DevelopmentPage() {
         <div className="flex justify-center items-center px-4 py-8">
           <Process
             steps={[0, 1, 2, 3, 4].map((index) => ({
+              key: `process-step-${index}`,
               title: t(`process.steps.${index}.title`),
               detail: t(`process.steps.${index}.detail`),
             }))}
@@ -79,7 +80,7 @@ export default function DevelopmentPage() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-10">
             {[0, 1, 2, 3].map((index) => (
               <div
-                key={index}
+                key={`business-value-${index}`}
                 className="bg-white rounded-2xl p-6 shadow-md flex flex-col items-center text-center h-full border border-gray-100"
               >
                 <h3
