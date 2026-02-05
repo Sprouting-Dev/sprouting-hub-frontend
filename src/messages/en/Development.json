@@ -1,0 +1,70 @@
+{
+  "title": "Software Development",
+  "serviceCard": {
+    "title": "Software Development",
+    "detail": "We engineer bespoke, high-performance digital solutions designed to scale with your business. Our full-stack team delivers secure, maintainable systems built on proven tech stacks—from modern web applications to complex enterprise platforms. We transform your vision into production-ready software that drives measurable business outcomes."
+  },
+  "process": {
+    "title": "The Development Lifecycle",
+    "steps": {
+      "0": {
+        "title": "Requirement Engineering",
+        "detail": "Aligning technical specifications with overarching business objectives."
+      },
+      "1": {
+        "title": "UX/UI Strategy",
+        "detail": "Developing intuitive interfaces through Figma, supported by scalable Design Systems."
+      },
+      "2": {
+        "title": "Agile Execution",
+        "detail": "Sprint-based development cycles ensuring transparency, flexibility, and rapid iteration."
+      },
+      "3": {
+        "title": "Security & QA",
+        "detail": "Multi-layered functional, performance, and security validation to ensure system hardening."
+      },
+      "4": {
+        "title": "Deployment & Lifecycle Management",
+        "detail": "Seamless production transition followed by proactive maintenance and optimization."
+      }
+    }
+  },
+  "useCases": {
+    "title": "Advanced Technology Stack",
+    "items": {
+      "0": {
+        "title": "Frontend Architecture",
+        "detail": "Next.js, React, TypeScript, Tailwind CSS"
+      },
+      "1": {
+        "title": "Backend & Infrastructure",
+        "detail": "Supabase (Database & Authentication), Custom API Architecting, Serverless Computing"
+      },
+      "2": {
+        "title": "DevOps & Deployment",
+        "detail": "Automated CI/CD pipelines via Vercel and Render for rapid, zero-downtime deployments."
+      }
+    }
+  },
+  "businessValue": {
+    "title": "Specialized Solutions",
+    "items": {
+      "0": {
+        "title": "FinTech & Payment Integration",
+        "detail": "Secure, compliant payment gateways and transaction management systems."
+      },
+      "1": {
+        "title": "Business Intelligence Dashboards",
+        "detail": "Custom analytics engines providing actionable, real-time insights."
+      },
+      "2": {
+        "title": "Membership & Enterprise Ecosystems",
+        "detail": "Sophisticated user portals, authentication flows, and registration management."
+      },
+      "3": {
+        "title": "Digital Content Infrastructure",
+        "detail": "High-scale E-book platforms and proprietary Content Management Systems."
+      }
+    }
+  }
+}
