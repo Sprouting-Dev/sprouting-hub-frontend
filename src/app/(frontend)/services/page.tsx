@@ -74,7 +74,7 @@ export default function ServicesPage() {
           imagePosition="right"
           button={{
             title: t('coreExpertise.devCard.button'),
-            onClick: () => router.push('/#'),
+            onClick: () => router.push('/services/development'),
             icon: <ArrowRight size={20} />,
           }}
         />
